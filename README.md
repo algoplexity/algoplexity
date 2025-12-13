@@ -49,7 +49,7 @@ We are executing a **"Reduction-Synthesis"** cycle: zooming in from the macro-sw
 *   **Legacy:** Established the **Architecture** (Simple Detector + Sophisticated Signal).
 *   **Artifact:** [**The Somatic Marker of Markets**](https://doi.org/10.13140/RG.2.2.35243.09767) (DOI: 10.13140/RG.2.2.35243.09767).
 
-*   ### **Horizon 1: The Cognitive EEG (2025b)**
+### **Horizon 1: The Cognitive EEG (2025b)**
 *   **Discovery:** **Taxonomy of Cognitive Failure.**
     *   **2008:** **Cognitive Saturation** (Rule 54 / Colliding Solitons). The market "thinks itself into a corner."
     *   **2020:** **Cognitive Overload** (Rule 60 / Fractal Shattering). The shock outruns the mixing time.
