@@ -41,13 +41,15 @@ We are executing a **"Reduction-Synthesis"** cycle: zooming in from the macro-sw
 *   **Discovery:** Financial markets contain discoverable algorithmic structures (Rule 131, Pair 35/115) that are invisible to standard econometrics.
 *   **Method:** Genetic Algorithms (Search) + MILS Encoding.
 *   **Legacy:** Established the **Ontology** (Markets are Computers) but lacked Real-Time Diagnosis.
+*   **Artifact:** [**Discovering Hidden Structures in Stock Market Data**](https://doi.org/10.13140/RG.2.2.22740.46722) (DOI: 10.13140/RG.2.2.22740.46722).
 
 ### **Horizon 0: The Somatic Marker (2025a)**
 *   **Discovery:** **"Less is More."** High-resolution statistical multivariate models (VAR) fail to detect breaks due to parameter explosion. A simple univariate proxy (Predictive Error) works better.
 *   **Method:** Logistic Regression + MDL.
 *   **Legacy:** Established the **Architecture** (Simple Detector + Sophisticated Signal).
+*   **Artifact:** [**The Somatic Marker of Markets**](https://doi.org/10.13140/RG.2.2.35243.09767) (DOI: 10.13140/RG.2.2.35243.09767).
 
-### **Horizon 1: The Cognitive EEG (2025b)**
+*   ### **Horizon 1: The Cognitive EEG (2025b)**
 *   **Discovery:** **Taxonomy of Cognitive Failure.**
     *   **2008:** **Cognitive Saturation** (Rule 54 / Colliding Solitons). The market "thinks itself into a corner."
     *   **2020:** **Cognitive Overload** (Rule 60 / Fractal Shattering). The shock outruns the mixing time.
