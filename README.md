@@ -61,17 +61,26 @@ We are executing a **"Reduction-Synthesis"** cycle: zooming in from the macro-sw
 
 ### **Horizon 3: The Graph-Theoretic Future**
 *   **Hypothesis:** Systemic Risk is a **Graph Neural Cellular Automaton (GNCA)**.
-*   **The Scientific Goal:** Return to the multivariate domain (from the Thesis) equipped with the tools of Horizon 1 & 2 to solve the **"Hive Mind"** problem.
-*   **Application A (Finance/UCL): Modeling Algorithmic Monoculture.**
+*   **The Scientific Goal:** Return to the multivariate domain (from the Thesis) equipped with the tools of Horizon 1 & 2 to solve the **"Hive Mind"** problem across three scales: **Markets, Institutions, and Economies.
+*   **Application A (Markets / UCL): Modeling Algorithmic Monoculture.**
     *   *The Theory:* Building on **Farmer & Skouras [2013]**, we treat the market as an ecology of strategies. When AI agents converge on identical utility functions, the ecology loses resilience.
     *   *The Simulation:* We will use GNCA to model this **Strategy Convergence**, proving that Flash Crashes are not random outliers but the inevitable result of homogenized cognition in a multi-agent system.
-*   **Application B (Society/ANU): Enabling Cybernetic Governance.**
-    *   *The Theory:* Operationalizing the **ANU Cybernetics White Paper [2021]** and **Ashby’s Law of Requisite Variety**. Traditional leadership focuses on the "Node" (The Leader); Cybernetics focuses on the "Feedback Loop" (The System).
-    *   *The Tool:* Building the dashboard for **21st Century Leadership**—detecting when a social network drifts into "Cognitive Saturation" (Rule 54) so leaders can steer the system back to viability.
-*   **Application C (Economics/INET Oxford): Foundations of Complexity.**
-    *   *The Theory:* Challenging the "General Equilibrium" dogma via **Complexity Economics [Arthur, 2021]**. We posit the economy is a non-equilibrium system where innovation and risk are **Endogenous Computations**.
-    *   *The Model:* GNCA provides the mathematical formalism to model the **Combinatorial Evolution** of economic rules.
+*   **Application B (Institutions & Enterprises / ANU)): Enabling Cybernetic Governance.**
+    *   *The Theory:* Operationalizing the **ANU Cybernetics White Paper [2021]** and **Ashby’s Law of Requisite Variety**. Traditional leadership focuses on the "Node" (The Leader); Cybernetics focuses on the "Organization" (Network).
+    *   *The Tool:* Building the dashboard for **21st Century Leadership**—detecting when an Enterprise or Institution drifts into "Cognitive Saturation" (Rule 54) so leaders can steer the organizational structure back to viability.
+*   **Application C (The Economy / INET Oxford): Foundations of Complexity.**
+    *   *The Theory:* Challenging the "General Equilibrium" dogma via **Complexity Economics [Arthur, 2021]**. The economy is a non-equilibrium system where innovation and risk are **Endogenous Computations**.
+    *   *The Model:* Using GNCA to model the **Combinatorial Evolution** of economic rules and supply chains.
 
+---
+
+### **3. Why this phrasing is superior**
+
+1.  **"Markets" (App A):** Locks in the **Finance** crowd (UCL/Quant).
+2.  **"Institutions & Enterprises" (App B):** Locks in the **Management/Systems** crowd (ANU/Williams). It suggests your tool can diagnose a *company* failing, not just a stock crashing.
+3.  **"The Economy" (App C):** Locks in the **Policy/Macro** crowd (INET/Oxford).
+
+**Decision:** Go ahead and make this update. It creates a "Full Spectrum" research program that is irresistible to a Cybernetics department.
 ---
 
 ## 📊 Shared Data Artifacts (Hugging Face)
