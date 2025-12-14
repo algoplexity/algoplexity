@@ -62,27 +62,22 @@ We are executing a **"Reduction-Synthesis"** cycle: zooming in from the macro-sw
 *   **Goal:** Solve the **Control Problem** via Zero-Shot Adaptation.
 
 ### **Horizon 3: The Graph-Theoretic Future**
-*   **Hypothesis:** Systemic Risk is a **Graph Neural Cellular Automaton (GNCA)**.
-*   **The Scientific Goal:** Return to the multivariate domain (from the Thesis) equipped with the tools of Horizon 1 & 2 to solve the **"Hive Mind"** problem across three scales: **Markets, Institutions, and Economies.
-*   **Application A (Markets / UCL): Modeling Algorithmic Monoculture.**
-    *   *The Theory:* Building on **Farmer & Skouras [2013]**, we treat the market as an ecology of strategies. When AI agents converge on identical utility functions, the ecology loses resilience.
-    *   *The Simulation:* We will use GNCA to model this **Strategy Convergence**, proving that Flash Crashes are not random outliers but the inevitable result of homogenized cognition in a multi-agent system.
-*   **Application B (Institutions & Enterprises / ANU)): Enabling Cybernetic Governance.**
-    *   *The Theory:* Operationalizing the **ANU Cybernetics White Paper [2021]** and **Ashby’s Law of Requisite Variety**. Traditional leadership focuses on the "Node" (The Leader); Cybernetics focuses on the "Organization" (Network).
-    *   *The Tool:* Building the dashboard for **21st Century Leadership**—detecting when an Enterprise or Institution drifts into "Cognitive Saturation" (Rule 54) so leaders can steer the organizational structure back to viability.
-*   **Application C (The Economy / INET Oxford): Foundations of Complexity.**
-    *   *The Theory:* Challenging the "General Equilibrium" dogma via **Complexity Economics [Arthur, 2021]**. The economy is a non-equilibrium system where innovation and risk are **Endogenous Computations**.
-    *   *The Model:* Using GNCA to model the **Combinatorial Evolution** of economic rules and supply chains.
+*   **Hypothesis:** Systemic Risk is a computation defined by the tension between **Topological Locality** (e.g., Debt obligations) and **Global Information Propagation** (e.g., Market narratives).
+*   **The Architectural Pivot:** Pure GNNs suffer from the $\ell$-hop receptive field limit [Zhang et al., 2024]. To capture both local contagion (Rule 54) and global shocks (Rule 60), we advance beyond standard GNCA to **Attention-Augmented Graph Automata (ViTCA)**.
+*   **The Scientific Goal:** Solve the "Hive Mind" problem across three scales:
 
----
+#### **Application A (Markets / UCL): Modeling Algorithmic Monoculture**
+*   **The Theory:** Building on **Farmer & Skouras [2013]**, we treat the market as an ecology of strategies. When AI agents converge on identical utility functions, the ecology loses resilience.
+*   **The Simulation:** We will use **Attention-Augmented GNCA** to model this **Strategy Convergence**, proving that Flash Crashes are not random outliers but the inevitable result of homogenized cognition in a multi-agent system. The "Attention" mechanism allows us to model how shocks teleport across the network instantly, bypassing local neighbor checks.
 
-### **3. Why this phrasing is superior**
+#### **Application B (Institutions & Enterprises / ANU): Enabling Cybernetic Governance**
+*   **The Theory:** Operationalizing the **ANU Cybernetics White Paper [2021]** and **Ashby’s Law of Requisite Variety**. Traditional leadership focuses on the "Node" (The Leader); Cybernetics focuses on the "Organization" (Network).
+*   **The Tool:** A **Differentiable Logic (DiffLogic)** Dashboard. Unlike black-box neural networks, DiffLogic allows us to extract **interpretable boolean rules** (e.g., `IF (Flow < X) AND (Neighbor_Risk > Y) THEN Collapse`). This empowers leaders to see the "Cognitive Saturation" (Rule 54) and steer the organization back to viability using explicit regulatory logic.
 
-1.  **"Markets" (App A):** Locks in the **Finance** crowd (UCL/Quant).
-2.  **"Institutions & Enterprises" (App B):** Locks in the **Management/Systems** crowd (ANU/Williams). It suggests your tool can diagnose a *company* failing, not just a stock crashing.
-3.  **"The Economy" (App C):** Locks in the **Policy/Macro** crowd (INET/Oxford).
+#### **Application C (The Economy / INET Oxford): Foundations of Complexity**
+*   **The Theory:** Challenging the "General Equilibrium" dogma via **Complexity Economics [Arthur, 2021]**. The economy is a non-equilibrium system where innovation and risk are **Endogenous Computations**.
+*   **The Model:** Modeling the **Combinatorial Evolution** of economic rules. By using Graph Transformers, we can capture the deep, long-range dependencies inherent in modern global supply chains.
 
-**Decision:** Go ahead and make this update. It creates a "Full Spectrum" research program that is irresistible to a Cybernetics department.
 ---
 
 ## 📊 Shared Data Artifacts (Hugging Face)
