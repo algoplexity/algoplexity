@@ -31,7 +31,7 @@ We are executing a **"Reduction-Synthesis"** cycle: zooming in from the macro-sw
 | **Horizon 0** | Sensation | **The Nerve** | **1-D (Time)** | *The Somatic Marker.* Falsifying statistical models; validating that "Pain" (Predictive Error) signals instability. | [**The Coherence Meter**](https://github.com/algoplexity/Coherence-Meter) |
 | **Horizon 1** | Perception | **The Neuron** | **1-D (Time)** | *The Cognitive EEG.* Decoding the "State of Mind" (Solitons vs Fractals) using the AIT Physicist. | [**Comp. Phase Transitions**](https://github.com/algoplexity/computational-phase-transitions) |
 | **Horizon 2** | Agency | **The Agent** | **Cybernetic** | *The Reflective Mind.* An autonomous agent that adapts its policy to the entropic landscape (AIXI-Approx). | [**The QCEA-AIXI Agent**](https://github.com/algoplexity/qcea-aixi-agent) |
-| **Horizon 3** | Society | **The Hive Mind** | **N-D (Graph)** | *The Collective Intelligence.* Modeling systemic risk in **Financial Markets** and **Social Systems** via Graph Neural Cellular Automata (GNCA). | *Planning* |
+| **Horizon 3** | Society | **The Hive Mind** | **N-D (Graph)** | *The Collective Intelligence.* Modeling systemic risk in **Financial Markets** and **Social Systems** via Graph Neural Cellular Automata (GNCA). | [**The Hive Mind**](https://github.com/algoplexity/hive-mind-gnca) |
 
 ---
 
