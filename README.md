@@ -47,7 +47,7 @@ We are executing a **"Reduction-Synthesis"** cycle: zooming in from the macro-sw
 *   **Discovery:** **"Less is More."** High-resolution statistical multivariate models (VAR) fail to detect breaks due to parameter explosion. A simple univariate proxy (Predictive Error) works better.
 *   **Method:** Logistic Regression + MDL.
 *   **Legacy:** Established the **Architecture** (Simple Detector + Sophisticated Signal).
-*   **Artifact:** [**SSRN Working Paper**](https://ssrn.com/abstract=5914102), [**ResearchGate**](https://doi.org/10.13140/RG.2.2.35243.09767) (DOI: 10.13140/RG.2.2.35243.09767)
+*   **Artifact:** [**SSRN Working Paper**](https://ssrn.com/abstract=5914102), [**ResearchGate**](https://www.researchgate.net/publication/398663233_The_Somatic_Marker_of_Markets_Falsifying_Statistical_Complexity_in_Structural_Break_Detection/citations)
  
 ### **Horizon 1: The Cognitive EEG (2025b)**
 *   **Discovery:** **Taxonomy of Cognitive Failure.**
