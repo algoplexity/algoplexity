@@ -62,21 +62,21 @@ We are executing a **"Reduction-Synthesis"** cycle: zooming in from the macro-sw
 *   **Goal:** Solve the **Control Problem** via Zero-Shot Adaptation.
 
 ### **Horizon 3: The Graph-Theoretic Future**
-*   **Hypothesis:** Systemic Risk is a computation defined by the tension between **Topological Locality** (e.g., Debt obligations) and **Global Information Propagation** (e.g., Market narratives).
-*   **The Architectural Pivot:** Pure GNNs suffer from the $\ell$-hop receptive field limit [Zhang et al., 2024]. To capture both local contagion (Rule 54) and global shocks (Rule 60), we advance beyond standard GNCA to **Attention-Augmented Graph Automata (ViTCA)**.
-*   **The Scientific Goal:** Solve the "Hive Mind" problem across three scales:
+*   **Hypothesis:** Systemic Risk is a **Graph Neural Cellular Automaton (GNCA)**. A market crash is the propagation of a specific computational state (Rule 54/Default) across the asset topology.
+*   **The Challenge:** As identified in our review of **Burtsev [2024]** and **Grattarola [2021]**, standard GNCAs excel at instantaneous local updates but struggle with **Long-Horizon Planning** in complex regimes. Due to the **$\ell$-hop receptive field limit**, they often fail to predict the long-range propagation of "Soliton" structures (Rule 54) over extended timeframes.
+*   **The Scientific Goal:** To engineer a **Deep GNCA** capable of robust long-term simulation. We will move beyond simple "Next-Step Prediction" to **"Trajectory Optimization,"** incorporating multi-step horizons into the loss function to capture the full lifecycle of a systemic crisis.
 
 #### **Application A (Markets / UCL): Modeling Algorithmic Monoculture**
-*   **The Theory:** Building on **Farmer & Skouras [2013]**, we treat the market as an ecology of strategies. When AI agents converge on identical utility functions, the ecology loses resilience.
-*   **The Simulation:** We will use **Attention-Augmented GNCA** to model this **Strategy Convergence**, proving that Flash Crashes are not random outliers but the inevitable result of homogenized cognition in a multi-agent system. The "Attention" mechanism allows us to model how shocks teleport across the network instantly, bypassing local neighbor checks.
+*   **The Theory:** Market stability relies on strategy diversity. When AI agents converge on identical strategies, the system becomes rigid.
+*   **The Simulation:** We will use GNCA to model this **Strategy Convergence**. By simulating the network over long time horizons, we aim to prove that "Flash Crashes" are the inevitable mathematical result of homogenized decision rules in a connected graph.
 
-#### **Application B (Institutions & Enterprises / ANU): Enabling Cybernetic Governance**
-*   **The Theory:** Operationalizing the **ANU Cybernetics White Paper [2021]** and **Ashby’s Law of Requisite Variety**. Traditional leadership focuses on the "Node" (The Leader); Cybernetics focuses on the "Organization" (Network).
-*   **The Tool:** A **Differentiable Logic (DiffLogic)** Dashboard. Unlike black-box neural networks, DiffLogic allows us to extract **interpretable boolean rules** (e.g., `IF (Flow < X) AND (Neighbor_Risk > Y) THEN Collapse`). This empowers leaders to see the "Cognitive Saturation" (Rule 54) and steer the organization back to viability using explicit regulatory logic.
+#### **Application B (Institutions / ANU): Cybernetic Governance**
+*   **The Theory:** Leadership is the stewardship of system topology.
+*   **The Tool:** A **Systemic Dashboard**. Using the GNCA to visualize how "Cognitive Saturation" (information overload) spreads through an organization's communication network, allowing leaders to intervene before the graph loses coherence.
 
-#### **Application C (The Economy / INET Oxford): Foundations of Complexity**
-*   **The Theory:** Challenging the "General Equilibrium" dogma via **Complexity Economics [Arthur, 2021]**. The economy is a non-equilibrium system where innovation and risk are **Endogenous Computations**.
-*   **The Model:** Modeling the **Combinatorial Evolution** of economic rules. By using Graph Transformers, we can capture the deep, long-range dependencies inherent in modern global supply chains.
+#### **Application C (Economy / INET Oxford): Complexity Economics**
+*   **The Theory:** The economy is a non-equilibrium system of interacting automata.
+*   **The Model:** Modeling supply chains not as input-output matrices, but as **Evolving Computation**. We track how shocks (Rule 60) propagate through the global trade network, testing which topologies are robust to "Fractal Shattering."
 
 ---
 
