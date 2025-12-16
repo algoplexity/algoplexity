@@ -1,6 +1,8 @@
 # The Algoplexity Research Program
 
-[![Status](https://img.shields.io/badge/Status-Active-success.svg)]() [![Field](https://img.shields.io/badge/Field-Algorithmic%20Cognitive%20Science-blue.svg)]() [![Framework](https://img.shields.io/badge/Framework-UAI%20%7C%20Nested%20Learning%20%7C%20AID-purple.svg)]()
+![alt text](https://img.shields.io/badge/Status-Active-success.svg)
+![alt text](https://img.shields.io/badge/Field-Algorithmic%20Cognitive%20Science-blue.svg)
+![alt text](https://img.shields.io/badge/Framework-UAI%20%7C%20QCEA%20%7C%20Nested%20Learning%20%7C%20AID-purple.svg)
 
 **Decoding the Physics of Intelligence in Complex Adaptive Systems.**
 
