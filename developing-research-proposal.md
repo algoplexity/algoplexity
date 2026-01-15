@@ -1,3 +1,139 @@
+
+Here are the final, fully consolidated documents. They integrate the **Societal Mandate** (Menzies/ANU Leadership), the **Systems Architecture** (Stafford Beer’s VSM), and the **Hard Science** (Battiston/Renormalization).
+
+These are ready for submission as the foundation of your Master's coursework and the launchpad for your PhD candidacy.
+
+***
+
+# DOCUMENT 1: The CPS Project Proposal
+**Submission for ANU Course CYBN8001 (Cyber-Physical Systems)**
+
+## **Project Title:** The Civic Resonator
+**Subtitle:** Universal Topology for Situated Stewardship: Engineering the Algedonic Loop of Collective Intelligence
+
+**Student:** Yeu Wen Mak
+**Date:** January 15, 2026
+**Context:** The Nelson Wetlands Protocol (Horizon 3)
+
+---
+
+### 1. Executive Summary: The Leadership Mandate
+The ANU/Menzies White Paper argues that 21st-century challenges—like the **Nelson Wetlands conflict** [1]—require a shift from "Leader-Centric" models to **"Systemic Leadership."** Leadership is no longer a trait of an individual, but a **"condition of the system"** [2].
+
+Currently, our civic systems lack the sensors to monitor this condition. We rely on slow, bureaucratic reporting (System 5) rather than real-time physiological monitoring (System 3).
+
+**The Civic Resonator** is a cyber-physical intervention designed to fill this gap. It acts as a **"Boundary Object"** [3] that operationalizes **Stafford Beer’s Viable System Model (VSM)**. By functioning as an **"Algedonic Monitor,"** the device continuously scans for "Exceptions" in social topology (e.g., adversarial noise). It uses haptic feedback to generate the **"Productive Discomfort"** [2] required to shift a group from individual rhetoric to systemic coherence.
+
+### 2. Theoretical Framework
+We synthesize the ANU Cybernetics Leadership framework with Network Physics:
+
+*   **Feedback (VSM System 3):** The device translates invisible social dynamics into an **Algedonic Signal** (Pain/Pleasure), providing the "Audit Channel" required for self-regulation.
+*   **Connections (Simplicial Topology):** Following **Battiston et al.** [4], the software filters out pairwise connections ($A \to B$) and only recognizes **Simplicial Complexes** ($A+B+C$). It prioritizes the *relationship* over the *component*.
+*   **Plurality (Requisite Variety):** The sensor array enforces **Ashby’s Law**. The system remains inert unless multiple, distinct sensor zones (representing diverse worldviews) are engaged simultaneously.
+
+### 3. Technical Implementation: The "Algedonic Loop"
+
+The device is a **Social-Cyber-Physical Loop** designed to embody the physics of renormalization.
+
+#### **Layer A: The Plurality Sensor (Input)**
+*   **Hardware:** 3x Capacitive Zones (Copper) + Microphone Array.
+*   **The Logic:** A **Simplicial Gating Function**.
+    *   *Constraint:* If inputs are sequential (taking turns), the system registers "Linear Noise."
+    *   *Activation:* The system only registers "Signal" when interactions occur within a **Simultaneity Window** ($\Delta t < 50ms$), physically validating that the group is operating as a coherent unit.
+
+#### **Layer B: The Nested Monitor (Model)**
+*   **Hardware:** ESP32 running **Nested Learning Architectures** [5].
+*   **The Algorithm:** Continuous **Exception Monitoring**.
+    *   *The Fast Loop (Reflex):* Monitors immediate topological symmetry.
+    *   *The Slow Loop (Viability):* Calculates the moving average of group entropy.
+    *   *The Exception:* If `Entropy > Viability Threshold`, the system triggers a **System 3 Alert**.
+
+#### **Layer C: Embodied Feedback (Output)**
+*   **Hardware:** Haptic Drivers (Vibration) + 60-Pixel LED Ring.
+*   **The Experience:**
+    *   **Rule 60 (The Exception):** When the group is non-viable (adversarial), the device emits an arrhythmic, dissonant vibration. This is **Productive Discomfort**—physical evidence of failure.
+    *   **Rule 110 (The Synergy):** When the Exception is resolved via Simplicial closure, the device locks into a stable "Soliton" state (40Hz resonance + Standing Wave light).
+
+### 4. Project Plan & Learning Outcomes
+
+| Phase | Activity | Learning Outcome (CYBN8001) |
+| :--- | :--- | :--- |
+| **Weeks 1-4** | **Breadboarding the Gate:** Calibrating the capacitive "Simultaneity Window" to differentiate accidental touch from intentional consensus. | *"Interrogate separate components"* |
+| **Weeks 5-8** | **Coding the Monitor:** Implementing the VSM Exception logic on the ESP32. | *"Technological Constellations"* |
+| **Week 9** | **Fabrication:** 3D printing the chassis as a heavy, communal "Stone" (grounding the abstract). | *"Making & Building"* |
+| **Week 10** | **The Mock Summit:** Deploying the device in a "Nelson Wetlands" simulation to observe if **Productive Discomfort** changes negotiation tactics. | *"Work Integrated Learning"* |
+
+### 5. References
+**[1] ABC News.** (2025). *Nelson Wetlands green energy boom planning protections.*
+**[2] ANU School of Cybernetics & The Menzies Foundation.** (2024). *Redefining 21st Century Leadership: A Cybernetic Approach.*
+**[3] Star, S. L.** (1989). *The Structure of Ill-Structured Solutions: Boundary Objects.*
+**[4] Battiston, F., et al.** (2025). *Higher-order interactions shape collective human behavior.* Nature Human Behaviour.
+**[5] Behrouz, A., et al.** (2025). *Nested Learning: The Illusion of Deep Learning Architectures.* NeurIPS.
+
+***
+
+# DOCUMENT 2: The PhD Research Proposal
+**Horizon 3 of the Algoplexity Research Program**
+
+## **Research Title:** Fractal Cybernetics
+**Subtitle:** Cyber-Physical Systems as Renormalization Operators for the Civic Nervous System
+
+**Candidate:** Yeu Wen Mak
+**Domain:** Higher-Order Cybernetics / Social Physics
+**Key Context:** The Crisis of Representative Scaling ("The Room vs. The Map")
+
+---
+
+### 1. Abstract: The Renormalization Failure
+Current governance models suffer from a scaling crisis. As identified by the **Brookings Institution** [1], "Smart local actions" end up misaligned with "System-wide synergies." In physics, this is a **Renormalization Failure**—the inability to compress micro-state complexity into macro-state signal without losing fidelity.
+
+This thesis proposes **Fractal Cybernetics**: a framework where Cyber-Physical Systems act as **Renormalization Operators**. By physically constraining social dynamics to require **Simplicial Synergy**, we can engineer the **"Civic Nervous System"**—a fractal network of "Algedonic Loops" [2] that allow society to self-regulate like a Viable System.
+
+### 2. Research Question
+**Primary:**
+> *Can a Cyber-Physical System function as a **Renormalization Group Operator**—continuously **monitoring for exceptions** in local topology to ensure that emergent consensus remains **Algorithmically Computable** at the global level?*
+
+**Secondary:**
+*   **The Leadership Question:** Can an interface designed for **"Productive Discomfort"** [3] (Algedonic Feedback) facilitate a phase transition from "Class 3 Chaos" (Polarization) to "Class 4 Complexity" (Systemic Leadership)?
+*   **The Architectural Question:** Does a **Nested Learning Architecture** [4] (Fast-Reflex/Slow-Policy) prevent the **Systemic Coherence Loss** ($\Lambda > \eta$) typically observed in complex contagion scenarios?
+
+### 3. Theoretical Trinity
+
+#### **I. The Architecture: The Viable System Model (VSM)**
+We apply **Stafford Beer’s** cybernetics to the "Nelson Wetlands" problem.
+*   **The Gap:** Current negotiation lacks a functioning **System 3** (Optimization/Monitoring).
+*   **The Solution:** The **Civic Resonator** is an engineered Algedonic Monitor. By automating the detection of **Exceptions** (Topological Asymmetry), we allow the group to self-correct in real-time, maintaining the system within its "Physiological Limits" of viability.
+
+#### **II. The Physics: Simplicial Renormalization**
+We reject the standard network model (Edges). Following **Battiston (2025)** [5], we posit that "Systemic Leadership" is a topological phenomenon.
+*   **Hypothesis:** Information spreads via edges, but **Norms** spread via Simplices (Triangles). The CPS must enforce this topology to scale consensus.
+
+#### **III. The Goal: Algorithmic Computability**
+Building on **Algorithmic Information Dynamics** (Zenil), we define "Consensus" not as agreement, but as **Compression**. A viable policy is a compressed program that halts.
+*   **Metric:** We measure the **Lyapunov Exponent** of the conversation. Does the CPS force the group dynamics to converge (Stable Attractor) or diverge (Chaos)?
+
+### 4. Methodology: The "Embodied" Experiment
+The PhD will utilize the **Civic Resonator** (built in the Masters phase) to conduct a series of controlled "Nelson Protocol" experiments.
+
+*   **Agents:** 3 Human Participants + 1 CPS Agent (The Resonator).
+*   **The Intervention:**
+    *   *Control:* Standard Facilitation.
+    *   *Experimental:* **Simplicial Gating.** The device enforces **Ashby’s Law**, refusing to actuate unless "Requisite Variety" (Simultaneous diverse input) is detected.
+*   **Data Collection:** We will record the **"Exception Latency"**—the time it takes for a group to self-correct after an algedonic alert is triggered.
+
+### 5. Contribution to Knowledge
+This thesis bridges the gap between **Management Cybernetics** (VSM) and **Statistical Physics** (Renormalization). It contributes the concept of **"Higher-Order Stewardship"**:
+> *The engineering of environments that physically necessitate topological synchronization for actuation.*
+
+### 6. Select Bibliography
+1.  **Taylor, J., & Page, S. E.** (2025). *AI is changing the physics of collective intelligence.* Brookings Institution.
+2.  **Beer, S.** (1979). *The Heart of Enterprise.* (The Algedonic Loop).
+3.  **ANU School of Cybernetics & The Menzies Foundation.** (2024). *Redefining 21st Century Leadership.*
+4.  **Behrouz, A., et al.** (2025). *Nested Learning: The Illusion of Deep Learning Architectures.* NeurIPS.
+5.  **Battiston, F., et al.** (2025). *Higher-order interactions shape collective human behavior.* Nature Human Behaviour.
+
+---
+
 This is the **missing link**.
 
 You are absolutely right. Previous drafts treated the "Cybernetics" component as *Computational Physics* (Wolfram/Battiston). However, the **ANU School of Cybernetics** defines the field as **"The Study of Steering"**—specifically steering complex sociotechnical systems through leadership, feedback, and plurality.
