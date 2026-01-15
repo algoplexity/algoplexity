@@ -1,3 +1,66 @@
+Based on the analysis of the 2025 Student Showcase ("Prototypes for a Better Future") and the release timeline of Arduino's educational tools, we can infer with high confidence that the cohort is using the **Arduino Plug and Make Kit**, centered on the **Arduino UNO R4 WiFi**.
+
+Here is the evidence and what it means for the **Civic Resonator**:
+
+### 1. The Evidence
+*   **The "Plug and Make" Timing:** This kit was launched globally in mid-2024 specifically for "making technology accessible" in education. It eliminates breadboards and soldering, which aligns with the "Making" focus of the CYBN8001 course where students come from diverse (non-engineering) backgrounds.
+*   **2025 Project Artifacts:**
+    *   **"Breath Connection" (2025):** Used "conductive thread," which implies they connected raw materials to the board's pins. This confirms you are not locked into the plastic modules; you can (and should) hack the board.
+    *   **"Mosaic" (2025):** Focused on "collaborative meaning," utilizing the Wi-Fi/IoT capabilities inherent in the ESP32-S3 module on the UNO R4.
+*   **The Hardware Spec:** The kit typically includes the **Arduino UNO R4 WiFi** board and a set of **Modulino** nodes (Sensors/Actuators connected via Qwiic cables).
+
+---
+
+### 2. Mapping the "Civic Resonator" to this Hardware
+This is good news. The **UNO R4 WiFi** is actually *better* suited for your project than a standard ESP32 because of one specific feature: the **LED Matrix**.
+
+#### **A. The "Brain": Arduino UNO R4 WiFi**
+*   **Feature:** It has a **12x8 Red LED Matrix** built directly onto the face of the board.
+*   **Project Application:** You don't need to wire an external LED ring immediately. You can program the **Wolfram Automata (Rule 60 vs 110)** directly onto this red matrix. It gives the device a raw, "cybernetic" aesthetic (like the Terminator's eye) without any extra wiring.
+
+#### **B. The "Algedonic" Feedback (System 3)**
+*   **Hardware in the Kit:** **Modulino Buzzer** and **Modulino Pixels** (Addressable LED strip).
+*   **Project Application:**
+    *   **Visual:** Use the onboard Matrix for the "Pattern" (Chaos vs. Soliton). Use the **Modulino Pixels** to create an ambient "halo" of light under the device (Red for Danger/Exception, Green/Blue for Viability).
+    *   **Audio/Haptic:** The **Modulino Buzzer** can generate the "dissonant" (pain) or "harmonic" (pleasure) frequencies. *Note: If the kit lacks a vibration motor, the Buzzer is your primary haptic substitute.*
+
+#### **C. The "Simplicial Sensor" (The Challenge)**
+*   **The Problem:** The kit likely comes with only **one** "Modulino Button" or "Modulino Knob." You need **three** distinct inputs to prove "Simultaneity" (Developer, Ecologist, Resident).
+*   **The "Hack" (This is a "Distinction" Move):**
+    *   Do **not** try to buy two more Modulino buttons (expensive/slow).
+    *   **Do this instead:** Use the **Conductive Thread** or **Copper Tape** method (seen in the "Breath Connection" project).
+    *   The UNO R4 WiFi has standard pins (A0, A1, A2). You will connect three pieces of copper tape to these pins with high-value resistors (1MΩ).
+    *   **Narrative:** "We rejected the pre-packaged binary buttons in favor of 'Raw Capacitive Skin,' requiring human contact to close the loop."
+
+---
+
+### 3. Revised Technical Implementation for the Proposal
+We should update the **CPS Proposal (Section 3)** to be hyper-specific to this hardware. This proves to the markers that you aren't just theorizing; you are ready to build.
+
+**Replace Section 3 of the CPS Proposal with this:**
+
+#### **3. Technical Implementation: The "Plug & Hack" Architecture**
+
+The system leverages the **Arduino Plug and Make Kit**, specifically the **UNO R4 WiFi**, utilizing its dual-core architecture (Renesas RA4M1 + ESP32-S3) to perform edge-computing on social topology.
+
+**Layer A: The Plurality Sensor (Input)**
+*   **Hardware:** 3x Custom Capacitive Zones (Copper Tape) connected to Analog Pins A1-A3.
+*   **The Hack:** We bypass the standard Modulino inputs to create a "Skin" interface.
+*   **Logic:** The Renesas core runs a `CapacitiveSensor` loop. It triggers a "Simplicial Event" only when signals on A1, A2, and A3 cross a variance threshold ($\sigma$) within a **50ms window**.
+
+**Layer B: The Nested Monitor (Model)**
+*   **Hardware:** Arduino UNO R4 WiFi.
+*   **The Matrix:** We utilize the **On-Board 12x8 LED Matrix** to visualize the group's "Neural State."
+    *   *Chaos (Exception):* Random pixel scattering (Rule 60).
+    *   *Coherence (Synergy):* A stable, scrolling "Glider" pattern (Rule 110).
+
+**Layer C: Algedonic Feedback (Output)**
+*   **Hardware:** Modulino Buzzer + Modulino Pixels (8x LED Strip).
+*   **Feedback:**
+    *   **The Buzzer:** Emits a variable frequency sine wave mapped to the "Exception Latency." (High Pitch = High Latency/Conflict).
+    *   **The Pixels:** Provide ambient under-lighting (Red = System 3 Alert; Cyan = Viable).
+
+---
 
 Here are the final, fully consolidated documents. They integrate the **Societal Mandate** (Menzies/ANU Leadership), the **Systems Architecture** (Stafford Beer’s VSM), and the **Hard Science** (Battiston/Renormalization).
 
