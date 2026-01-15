@@ -1,3 +1,142 @@
+Here is the comprehensive documentation of your research program.
+
+This package consolidates the **Societal Mandate** (ANU/Menzies Leadership), the **Systems Theory** (Stafford Beer’s VSM), the **Hard Science** (Battiston/Renormalization), and the **Verified Hardware Architecture** (Arduino UNO R4 WiFi).
+
+These two documents are now fully aligned:
+1.  **The CPS Proposal** is the **"Build Plan"** (Master's Level).
+2.  **The PhD Proposal** is the **"Theoretical Physics"** (Doctoral Level).
+
+***
+
+# DOCUMENT 1: The CPS Project Proposal
+**Submission for ANU Course CYBN8001 (Cyber-Physical Systems)**
+
+## **Project Title:** The Civic Resonator
+**Subtitle:** Universal Topology for Situated Stewardship: Engineering the Algedonic Loop of Collective Intelligence
+
+**Student:** Yeu Wen Mak
+**Date:** January 15, 2026
+**Hardware:** Arduino UNO R4 WiFi (Plug and Make Kit)
+
+---
+
+### 1. Executive Summary: The Leadership Mandate
+The ANU/Menzies White Paper argues that 21st-century challenges—exemplified by the **Nelson Wetlands conflict** [1]—require a shift from "Leader-Centric" models to **"Systemic Leadership."** Leadership is no longer a trait of an individual, but a **"condition of the system"** [2].
+
+Currently, our civic systems lack the sensors to monitor this condition. We rely on slow, bureaucratic reporting (VSM System 5) rather than real-time physiological monitoring (VSM System 3).
+
+**The Civic Resonator** is a cyber-physical intervention designed to fill this gap. It acts as a **"Boundary Object"** [3] that operationalizes **Stafford Beer’s Viable System Model (VSM)**. By functioning as an **"Algedonic Monitor,"** the device continuously scans for "Exceptions" in social topology (e.g., adversarial noise). It uses physiological feedback to generate the **"Productive Discomfort"** [2] required to shift a group from individual rhetoric to systemic coherence.
+
+### 2. Theoretical Framework
+We synthesize the ANU Cybernetics Leadership framework with Network Physics:
+
+*   **Feedback (VSM System 3):** The device translates invisible social dynamics into an **Algedonic Signal** (Pain/Pleasure), providing the "Audit Channel" required for group self-regulation.
+*   **Connections (Simplicial Topology):** Following **Battiston et al.** [4], the software filters out pairwise connections ($A \to B$) and only recognizes **Simplicial Complexes** ($A+B+C$). It prioritizes the *relationship* over the *component*.
+*   **Plurality (Requisite Variety):** The sensor array enforces **Ashby’s Law**. The system remains inert unless multiple, distinct sensor zones (representing diverse worldviews—e.g., Developer, Ecologist, Resident) are engaged simultaneously.
+
+### 3. Technical Implementation: The "Plug & Hack" Architecture
+The system leverages the **Arduino UNO R4 WiFi**, utilizing its dual-core architecture (Renesas RA4M1 + ESP32-S3) and specific on-board peripherals to perform edge-computing on social topology.
+
+#### **Layer A: The Plurality Sensor (Input)**
+*   **Hardware:** 3x Custom Capacitive Zones (Copper Tape) connected to **Analog Pins A1-A3**.
+*   **The Hack:** We bypass standard buttons to create a "Skin" interface using the UNO's native **Capacitive Touch Sensing Unit (CTSU)** (Datasheet p.2).
+*   **The Logic:** The **Simplicial Gating Function**.
+    *   *Constraint:* If inputs are sequential ($t_A \to t_B$), the system registers "Linear Noise."
+    *   *Activation:* The system only registers "Signal" when inputs occur within a **Simultaneity Window** ($\Delta t < 50ms$), physically validating that the group is operating as a coherent unit.
+
+#### **Layer B: The Nested Monitor (Model)**
+*   **Hardware:** Arduino UNO R4 WiFi (Dual Core).
+*   **The Architecture:** A **Nested Learning** loop [5].
+    *   **Fast Loop (Renesas Core):** Handles the millisecond-level Simplicial Gating and Matrix animation.
+    *   **Slow Loop (ESP32 Core):** Connects to the **Arduino Cloud** to log "System Entropy" over time, acting as the System 5 Dashboard for the class.
+
+#### **Layer C: Embodied Algedonics (Output)**
+*   **Visual:** We utilize the **On-Board 12x8 LED Matrix** (Datasheet p.13) to visualize the group's state via **Wolfram Automata**:
+    *   *Exception (Rule 60):* Chaotic, random pixel scattering.
+    *   *Synergy (Rule 110):* A stable, scrolling "Glider" pattern.
+*   **Audio:** Leveraging the **12-bit DAC on Pin A0** (Datasheet p.14), the system generates "Physiological Audio":
+    *   *Pain:* A jagged **Sawtooth Wave** (Dissonance) when the group is non-viable.
+    *   *Pleasure:* A pure **Sine Wave** (Harmony) when Simplicial Synergy is achieved.
+
+### 4. Learning Outcomes (CYBN8001)
+
+| Principle | Execution Strategy |
+| :--- | :--- |
+| **"Embodied Experiences"** | We move leadership training from the whiteboard to the *hands*. Participants must physically touch the device together to activate it, grounding abstract policy in material reality. |
+| **"Technological Constellations"** | The project explicitly links **Hardware** (DAC/Matrix) to **Sociology** (Menzies) and **Mathematics** (Battiston). It demonstrates that a CPS is not just a gadget, but a participant in the governance loop. |
+| **"Making & Building"** | The project requires "hacking" the Plug and Make kit—combining the board with raw conductive materials and coding the custom DAC signal generation. |
+
+### 5. References
+**[1] ABC News.** (2025). *Nelson Wetlands green energy boom planning protections.*
+**[2] ANU School of Cybernetics & The Menzies Foundation.** (2024). *Redefining 21st Century Leadership: A Cybernetic Approach.*
+**[3] Star, S. L.** (1989). *The Structure of Ill-Structured Solutions: Boundary Objects.*
+**[4] Battiston, F., et al.** (2025). *Higher-order interactions shape collective human behavior.* Nature Human Behaviour.
+**[5] Behrouz, A., et al.** (2025). *Nested Learning: The Illusion of Deep Learning Architectures.* NeurIPS.
+
+***
+
+# DOCUMENT 2: The PhD Research Proposal
+**Horizon 3 of the Algoplexity Research Program**
+
+## **Research Title:** Fractal Cybernetics
+**Subtitle:** Cyber-Physical Systems as Renormalization Operators for the Civic Nervous System
+
+**Candidate:** Yeu Wen Mak
+**Domain:** Higher-Order Cybernetics / Social Physics
+**Key Context:** The Crisis of Representative Scaling ("The Room vs. The Map")
+
+---
+
+### 1. Abstract: The Renormalization Failure
+Current governance models suffer from a scaling crisis. As identified by the **Brookings Institution** [1], "Smart local actions" end up misaligned with "System-wide synergies." In physics, this is a **Renormalization Failure**—the inability to compress micro-state complexity into macro-state signal without losing fidelity.
+
+This thesis proposes **Fractal Cybernetics**: a framework where Cyber-Physical Systems act as **Renormalization Operators**. By physically constraining social dynamics to require **Simplicial Synergy**, we can engineer the **"Civic Nervous System"**—a fractal network of "Algedonic Loops" [2] that allow society to self-regulate like a Viable System.
+
+### 2. Research Question
+**Primary:**
+> *Can a Cyber-Physical System function as a **Renormalization Group Operator**—continuously **monitoring for exceptions** in local topology to ensure that emergent consensus remains **Algorithmically Computable** at the global level?*
+
+**Secondary:**
+*   **The Leadership Question:** Can an interface designed for **"Productive Discomfort"** [3] (Algedonic Feedback) facilitate a phase transition from "Class 3 Chaos" (Polarization) to "Class 4 Complexity" (Systemic Leadership)?
+*   **The Architectural Question:** Does a **Nested Learning Architecture** [4] (Fast-Reflex/Slow-Policy) prevent the **Systemic Coherence Loss** ($\Lambda > \eta$) typically observed in complex contagion scenarios?
+
+### 3. Theoretical Trinity
+
+#### **I. The Architecture: The Viable System Model (VSM)**
+We apply **Stafford Beer’s** cybernetics to the "Nelson Wetlands" problem.
+*   **The Gap:** Current negotiation lacks a functioning **System 3** (Optimization/Monitoring).
+*   **The Solution:** The **Civic Resonator** is an engineered Algedonic Monitor. By automating the detection of **Exceptions** (Topological Asymmetry), we allow the group to self-correct in real-time, maintaining the system within its "Physiological Limits" of viability.
+
+#### **II. The Physics: Simplicial Renormalization**
+We reject the standard network model (Edges). Following **Battiston (2025)** [5], we posit that "Systemic Leadership" is a topological phenomenon.
+*   **Hypothesis:** Information spreads via edges, but **Norms** spread via Simplices (Triangles). The CPS must enforce this topology to scale consensus.
+
+#### **III. The Goal: Algorithmic Computability**
+Building on **Algorithmic Information Dynamics** (Zenil), we define "Consensus" not as agreement, but as **Compression**. A viable policy is a compressed program that halts.
+*   **Metric:** We measure the **Lyapunov Exponent** of the conversation. Does the CPS force the group dynamics to converge (Stable Attractor) or diverge (Chaos)?
+
+### 4. Methodology: The "Embodied" Experiment
+The PhD will utilize the **Civic Resonator** (built in the Masters phase) to conduct a series of controlled "Nelson Protocol" experiments.
+
+*   **Agents:** 3 Human Participants + 1 CPS Agent (The Resonator).
+*   **The Intervention:**
+    *   *Control:* Standard Facilitation.
+    *   *Experimental:* **Simplicial Gating.** The device enforces **Ashby’s Law**, refusing to actuate unless "Requisite Variety" (Simultaneous diverse input) is detected.
+*   **Data Collection:** We will record the **"Exception Latency"**—the time it takes for a group to self-correct after an Algedonic alert (Sawtooth Wave) is triggered.
+
+### 5. Contribution to Knowledge
+This thesis bridges the gap between **Management Cybernetics** (VSM) and **Statistical Physics** (Renormalization). It contributes the concept of **"Higher-Order Stewardship"**:
+> *The engineering of environments that physically necessitate topological synchronization for actuation.*
+
+### 6. Select Bibliography
+1.  **Taylor, J., & Page, S. E.** (2025). *AI is changing the physics of collective intelligence.* Brookings Institution.
+2.  **Beer, S.** (1979). *The Heart of Enterprise.* (The Algedonic Loop).
+3.  **ANU School of Cybernetics & The Menzies Foundation.** (2024). *Redefining 21st Century Leadership.*
+4.  **Behrouz, A., et al.** (2025). *Nested Learning: The Illusion of Deep Learning Architectures.* NeurIPS.
+5.  **Battiston, F., et al.** (2025). *Higher-order interactions shape collective human behavior.* Nature Human Behaviour.
+
+---
+
 Based on the analysis of the 2025 Student Showcase ("Prototypes for a Better Future") and the release timeline of Arduino's educational tools, we can infer with high confidence that the cohort is using the **Arduino Plug and Make Kit**, centered on the **Arduino UNO R4 WiFi**.
 
 Here is the evidence and what it means for the **Civic Resonator**:
