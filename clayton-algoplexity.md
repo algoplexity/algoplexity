@@ -1,3 +1,57 @@
+
+
+Clayton’s new email introduces a **fundamental architectural component**: the **Resource Cycle** (Metabolism).
+
+Previously, our map treated the Strategic Organism largely as an **Information Processor** (Software).
+Clayton is now explicitly defining it as a **Physical Transformer** (Hardware/Metabolism).
+
+This fills a critical gap in our commercial understanding: **The VDT isn't just a decision tree; it is a metabolic map.** It tracks how the organism consumes resources ($R$) to produce value.
+
+Here are the specific updates to our two master control documents.
+
+---
+
+### 1. Update to the Alignment Map (v4.0)
+
+We need to inject a new layer between **Agency** (Decision) and **Society** (Market). Let’s call it **Physiology**.
+
+| Algoplexity Component | Williams Component | The Integration Point |
+| :--- | :--- | :--- |
+| **Horizon 0: Sensation** | **ELF** (Entropic Learning) | Value of Information. |
+| **Horizon 1: Perception** | **RPL** (Risk Pricing) | The "Entropic Beta" (Current Task). |
+| **Horizon 2: Agency** | **IAC** (Info-Action Cycle) | The Control System (Software). |
+| **Horizon 2.5: Physiology (NEW)** | **The Resource Cycle** | **Thermodynamic Constraints.** <br>*Williams:* Search $\to$ Acquire $\to$ Convert $\to$ Consume.<br>*Algoplexity:* **Landauer’s Principle.** The energy cost of computation.<br>*Commercial:* The **VDT** is the map of this conversion process. |
+| **Horizon 3: Society** | **Exchange / The Market** | **Superposition of Value.** Price is the collapse of subjective beliefs against objective resource constraints. |
+
+---
+
+### 2. Update to the Priority List (v2.2)
+
+We do **not** change the immediate actions (Discipline!), but we refine the **Commercial Phase** to reflect this new insight.
+
+**Phase 1: The Physics (Immediate)**
+*   **1.1. Stress Test #1: The "Entropic Beta" (Titan v13.6)**
+    *   *Status:* **RUNNING.** (Clayton is waiting for this while he finishes his "Rabbit Hole").
+
+**Phase 2: The Artifact (Medium Term)**
+*   **2.1. The Civic Resonator Fabrication**
+    *   *Status:* In Progress.
+
+**Phase 3: The Commercial Bridge (Long Term)**
+*   **3.1. VDT Architecture Study**
+    *   *Update:* We must now study the VDT not just as "Accounting" (Discrete Costing), but as **"Metabolism"** (Resource Cycling).
+    *   *Goal:* When we build the "Automated Strategic Twin," it must track **Matter** (Resources) as strictly as it tracks **Information** (Strategy).
+
+---
+
+### Summary for your records:
+*   **Clayton is building:** The "Hardware Specs" (Resources/Physics).
+*   **You are building:** The "Operating System" (Titan/Info-Processing).
+*   **The VDT:** Is the interface where Hardware meets Software.
+
+You can save this updated map. It effectively covers every theoretical and commercial base he has thrown at you.
+---
+
 This is the final batch of correspondence to clear. Clayton is now firing on all cylinders:
 1.  **Scholarly Excitement:** He wants *another* paper (Geopolitics).
 2.  **Personal Connection:** He is sharing the origin story of DCR (The "Nedbank" story).
