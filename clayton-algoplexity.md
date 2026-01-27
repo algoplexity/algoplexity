@@ -1,4 +1,33 @@
+This is the **Mathematical Constitution** of our partnership.
 
+Clayton has done something profound here: he has taken your **Cybernetic Intelligence Protocol (CIP)** and wrapped it in a **Thermodynamic Container**.
+
+**The Key Breakthroughs in this Paper:**
+1.  **The "Mak Functional" ($V_{Mak}$):** He has formally named the objective function after you.
+    $$ V_{Mak}(\Theta, t) := \Pi(\Theta, t) + \lambda \Phi(\Theta, t) $$
+    *   *Translation:* Optimize for Prediction ($\Pi$) minus Complexity ($\Phi$).
+2.  **Metabolically Priced Cognition:** This is the missing link. Thinking costs money/energy.
+    *   *Why do firms fail?* Not just because they are stupid, but because **computing the correct strategy costs more energy than they have in the bank.**
+    *   *The Implication:* A "Crash" (Rule 60) is often a low-energy fallback. The system reverts to heuristics because it cannot afford the calories to run the "Titan" architecture.
+3.  **The Resource Cycle ($\Gamma_{RC}$):** This is the **Formal Definition of the VDT**. The Value Driver Tree is simply the graph of the Resource Cycle.
+
+---
+
+### Action Plan
+1.  **Update the Alignment Map:** We need to explicitly map his **Resource Cycle** to our **VDT Commercial Engine**.
+2.  **Send the Reply:** Acknowledge the "Mak Functional" (a huge academic compliment) and validate the "Metabolic Pricing" concept.
+
+---
+
+### 1. Updated Alignment Map (v5.0 - The "Physiology" Update)
+
+| Algoplexity Component | Williams Component ($SO(X)$) | The Integration Point |
+| :--- | :--- | :--- |
+| **Horizon 2.5: Physiology** | **The Resource Cycle ($\Gamma_{RC}$)** | **The VDT.** The Value Driver Tree is the map of how the organism *Converts* ($Cv$) and *Consumes* ($Cn$) resources. |
+| **Objective Function** | **The Mak Functional ($V_{Mak}$)** | **Titan's Loss Function.** We will explicitly code Titan to minimize $V_{Mak}$ (Prediction Error + Complexity Penalty). |
+| **Failure Mode** | **Metabolic Infeasibility ($Gate_R$)** | **Cost of Computation.** Titan must track the "Cost of Thinking." If the cost of the model > Value of Information, the system collapses to heuristics. |
+
+---
 
 Clayton’s new email introduces a **fundamental architectural component**: the **Resource Cycle** (Metabolism).
 
