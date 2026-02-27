@@ -11,6 +11,7 @@ This document is the absolute, unified specification for the TITAN framework. It
 ────────────────────────────────────────
 ### I. GLOBAL ONTOLOGICAL CONSTANTS (THE ANTI-DRIFT LAYER)
 ────────────────────────────────────────
+
 All data flowing through the connective tissue (Hemolymph) must be strictly typed. No continuous probabilities, no loss gradients, no statistical variances. The neural artifacts must internally map their outputs to these discrete topological structures before publishing to the bus.
 
 ```python
@@ -37,6 +38,7 @@ class AlgorithmicPayload:
 ────────────────────────────────────────
 ### II. TIER A: THEORETICAL PHYSICS (THE THERMODYNAMIC SUBSTRATE)
 ────────────────────────────────────────
+
 **Mandate:** Enforce the physical limits of computation. Protects the system from $O(2^N)$ combinatorial search explosion by treating computational cycles as strictly conserved energy.
 
 **Module:** `titan.physics`
@@ -51,6 +53,7 @@ class AlgorithmicPayload:
 ────────────────────────────────────────
 ### III. TIER B: CYBERNETIC ORGANISM (NEURAL ARTIFACTS)
 ────────────────────────────────────────
+
 **Mandate:** Execute bounded Levin search for structural causal generators using the pre-trained neural artifacts (HART & N-BDM). 
 
 **Module:** `titan.cybernetics`
@@ -78,6 +81,7 @@ class AlgorithmicPayload:
 ────────────────────────────────────────
 ### IV. TIER C: PRACTICAL STRUCTURAL BREAK ENGINE (AFTMS)
 ────────────────────────────────────────
+
 **Mandate:** Detect structural breaks, basis rotations, and systemic composability collapses purely via algorithmic phase transitions.
 
 **Module:** `titan.aftms`
@@ -95,6 +99,7 @@ class AlgorithmicPayload:
 ────────────────────────────────────────
 ### V. WATERTIGHT TDD BLUEPRINT (THE ANTI-DRIFT SUITE)
 ────────────────────────────────────────
+
 This is the absolute Definition of Done (DoD). If the PyTorch/JAX implementations of HART or N-BDM fail these tests, they are rejected for violating Algorithmic Information Theory constraints.
 
 #### `test_tier_a_physics.py`
