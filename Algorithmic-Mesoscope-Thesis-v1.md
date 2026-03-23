@@ -209,6 +209,8 @@ Seek the minimal representation that preserves regime distinction and control vi
 
 The Algorithmic Mesoscope is a bounded, adaptive, compression‑driven framework for detecting regime transitions in complex systems.
 
+It operates by constructing mesoscopic observables and discovering generative models that compress them, enabling regime detection and control under bounded constraints.
+
 It operationalizes post‑complex simplicity by searching for compressed sufficient representations that preserve observability and control under constraint.
 
 Its purpose is not to reduce the world to simplicity, but to enable principled action within irreducible complexity.
