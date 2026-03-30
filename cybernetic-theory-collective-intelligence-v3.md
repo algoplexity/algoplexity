@@ -262,8 +262,59 @@ All share:
 
 ---
 
-## **9. One-Line Synthesis**
+### **6.1 Cost of Autonomy**
 
-> **Collective intelligence emerges when multi-agent systems maintain compressible joint structure (low coordination energy) while preserving non-trivial generative complexity, relative to an adaptive, bounded observer.**
+Autonomous behavior at the agent level introduces irreducible variability into the system.
+
+Define the **autonomy cost** as:
+
+[
+C_{auto} = \sum_{i=1}^{n} K_{est}(O(A_i))
+]
+
+This represents the total descriptive complexity required to encode agents independently.
 
 ---
+
+### **Interpretation**
+
+* High (C_{auto}):
+
+  * agents behave independently
+  * high variability
+  * weak coordination
+
+* Low (C_{auto}):
+
+  * agents are constrained or homogeneous
+  * reduced expressive capacity
+
+---
+
+### **Fundamental Trade-off**
+
+The system must balance:
+
+[
+\text{Autonomy (}C_{auto}\text{)} \quad \leftrightarrow \quad \text{Coordination (}E_O\text{)}
+]
+
+* Increasing autonomy raises potential complexity
+* Coordination reduces redundancy through shared structure
+
+---
+
+### **Key Insight**
+
+[
+K_{joint} = C_{auto} + E_O
+]
+
+Thus:
+
+> **Collective intelligence arises when autonomy is preserved but structured into compressible joint behavior.**
+
+> **Collective intelligence emerges when systems minimise coordination energy while preserving sufficient autonomy to sustain non-trivial generative complexity.**
+
+---
+
