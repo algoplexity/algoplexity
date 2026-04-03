@@ -20,6 +20,8 @@ We hypothesize that **system performance, robustness, and ethical reliability em
 
 The Mesoscope enables **real-time visualization and cybernetic steering** via interaction-level interventions (e.g., branching, role constraints, communication topology), shifting governance from output evaluation to **structural regulation of intelligence itself**.
 
+Recent evidence suggests that even single frontier models operate as internal “societies of thought,” where multiple reasoning processes interact and self-correct. This blurs the distinction between single-agent and multi-agent systems, implying that coordination dynamics are intrinsic to intelligence itself. The proposed Mesoscope targets this shared structure, enabling measurement and control of coordination both within and across AI systems.
+
 This work establishes a new experimental and theoretical foundation for **coordination-aware AI safety, governance, and system design**.
 
 ---
