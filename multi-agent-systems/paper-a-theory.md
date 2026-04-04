@@ -13,10 +13,12 @@ This paper establishes a minimal, closed theoretical foundation for collective i
 Collective intelligence is defined as a property of observer-dependent representations exhibiting non-trivial compressible structure. The theory is independent of implementation and introduces no computational or measurement assumptions.
 
 Paper A as distinct from paper B and C as defined below
+```
 CI-Minimal/
 ├── Paper_A_Theory.md
 ├── Paper_B_Computation.md
 └── Paper_C_Measurement_CIO.md
+```
 
 ---
 
