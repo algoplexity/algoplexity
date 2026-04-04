@@ -10,12 +10,13 @@
 
 ```
 /
-├── theory/          # Canonical theoretical definitions (CI, E_O, E_dir, I(G,e), phase space, observer model, CIv1–CIv20)
-├── implementation/  # CIO hardware spec, validation protocol, measurement pipeline
-├── paper/           # Working paper sections (abstract → 05)
-├── grants/          # Grant pitches extracted from working documents
-├── program/         # Long-term roadmap, theoretical background, guiding thesis
-└── archive/         # Superseded versions (theory v1–v3, Titan specs, etc.)
+├── theory/          # Canonical definitions: CI, E_O, E_dir, I(G,e), phase space, observer model, CIv1–CIv20  →  theory/README.md
+├── implementation/  # CIO hardware spec, merged validation protocol, 6-step measurement pipeline              →  implementation/README.md
+├── paper/           # Working paper sections (abstract, 01–05)                                               →  paper/README.md
+├── grants/          # Grant pitch: Algorithmic Mesoscope for multi-agent AI systems
+├── program/         # 10-year roadmap, theoretical background, guiding thesis
+├── archive/         # Superseded versions (theory v1–v3, Titan specs v1–v16, old READMEs, etc.)
+└── index.html       # Static landing page (algoplexity.github.io)
 ```
 
 ---
@@ -41,64 +42,13 @@ Our work unifies seven foundational theories into a coherent engineering framewo
 
 See **[`program/research-roadmap.md`](program/research-roadmap.md)** for the full Horizon 0–3 plan, per-horizon findings, and shared data artifacts.
 
----
-
-## 📚 The Scientific Canon & Detailed Findings
-
-### **Foundation: The Existence Proof (2023)**
-*   **Discovery:** Financial markets contain discoverable algorithmic structures (Rule 131, Pair 35/115) that are invisible to standard econometrics.
-*   **Method:** Genetic Algorithms (Search) + MILS Encoding.
-*   **Legacy:** Established the **Ontology** (Markets are Computers) but lacked Real-Time Diagnosis.
-*   **Artifact:** [**Discovering Hidden Structures in Stock Market Data**](https://doi.org/10.13140/RG.2.2.22740.46722).
-
-### **Horizon 0: The Somatic Marker (2025a)**
-*   **Discovery:** **"Less is More."** High-resolution statistical multivariate models (VAR) fail to detect breaks due to parameter explosion. A simple univariate proxy (Predictive Error) works better.
-*   **The Physics:** Identified the **"Pain"** signal ($dP/dt$) necessary for the inner-loop optimizer, marking the point where the environment outpaces the model ($\Lambda > \eta_K$).
-*   **Artifact:** [**SSRN Working Paper**](https://ssrn.com/abstract=5914102)
- 
-### **Horizon 1: The Cognitive EEG (2025b)**
-*   **Discovery:** **Taxonomy of Cognitive Failure.**
-    *   **Cognitive Saturation** (Rule 54 / Colliding Solitons): The market "thinks itself into a corner."
-    *   **Cognitive Overload** (Rule 60 / Fractal Shattering): The shock outruns the mixing time.
-*   **The NL Perspective:** Engineered the **Slow Context Flow**. The AIT Physicist compresses the long-term computational regime into a tractable state vector, acting as a "Lyapunov Meter" for the system.
-*   **Validation:** Achieved **-29.95%** early-warning lead time on unseen out-of-sample data (The Generalization Inversion).
-
-### **Horizon 2: The Reflective Physicist (Current)**
-*   **Discovery:** **Entropic Valuation & Plasticity.** An agent that adjusts its "Wingspan" (Uncertainty) based on the Physicist's diagnosis outperforms statistical baselines by **+19.0%**.
-*   **The Physics:** Solves the **Frequency Gap** via Nested Optimization. We define viability as the ratio between market bandwidth ($\Lambda$) and agent plasticity ($\eta_K$).
-    *   **System 0 (The Coherence Veto):** Hard-coded survival prior (Lyapunov Prior $\lambda > 0$) when $\Lambda \gg \eta_K$ (Cold Start/Crash). This prevents "Ruin Events."
-    *   **System 1 (The Iron Dome):** Fast homeostatic reflex enforcing variance floors.
-    *   **System 2 (The Physicist):** Slow context compression adapting policy when $\Lambda \approx \eta_K$.
-*   **Method:** **QCEA-AIXI Agent**. A cybernetic loop utilizing **Entropic Valuation** to trigger zero-shot policy shifts.
-
-### **Horizon 3: The Graph-Theoretic Future**
-*   **Hypothesis:** Systemic Risk is a **Graph Neural Cellular Automata (GNCA)**. A market crash is the propagation of a specific computational state (Rule 54/Default) across the asset topology.
-*   **The Scientific Goal:** To engineer **Deep GNCA Titans** [Behrouz et al., 2025]—graph nodes that are self-referential learners. We will simulate how "Flash Crashes" emerge when these self-modifying agents synchronize their internal optimization logic, causing **Global Coherence Loss**.
-*   **The Architectural Trinity:**
-    1.  **r-GCA (Relation-Based Neighborhoods):** Moving beyond physical adjacency to model influence across abstract financial topologies [Grattarola et al.].
-    2.  **E(n)-Equivariance:** Ensuring the model learns isotropic rules that hold regardless of the specific asset permutation [Gala et al.].
-    3.  **DiffLogic (Differentiable Logic):** Utilizing differentiable logic gates (AND/OR/XOR) to extract human-readable boolean rules for governance [Miotti et al.].
-
-#### **Application A (Markets / UCL): Modeling Algorithmic Monoculture**
-*   **The Theory:** Market stability relies on **Cognitive Diversity**. When AI agents converge on identical strategies (or identical *Update Rules* per NL theory), the system becomes rigid ($\eta_{Hive} \to 0$).
-*   **The Simulation:** We will use GNCA to model this **Strategy Convergence**. By simulating the network over long time horizons, we aim to prove that "Flash Crashes" are the inevitable mathematical result of homogenized decision rules in a connected graph.
-
-#### **Application B (Institutions / ANU): Cybernetic Governance**
-*   **The Theory:** Leadership is the stewardship of system topology.
-*   **The Tool:** A **Systemic Dashboard**. Using the GNCA to visualize how "Cognitive Saturation" (information overload) spreads through an organization's communication network, allowing leaders to intervene before the graph loses coherence.
-
-#### **Application C (Economy / INET Oxford): Complexity Economics**
-*   **The Theory:** The economy is a non-equilibrium system of interacting automata.
-*   **The Model:** Modeling supply chains not as input-output matrices, but as **Evolving Computation**. We track how shocks (Rule 60) propagate through the global trade network, testing which topologies are robust to "Fractal Shattering."
-
----
-
-## 📊 Shared Data Artifacts (Hugging Face)
-
-To ensure unassailable reproducibility, all Horizons operate on immutable scientific benchmarks.
-
-*   **[Algoplexity Structural Break Benchmark](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data):** The 1D Time Series corpus (Horizon 0/1).
-*   **[QCEA Adaptive Agent Benchmark](https://huggingface.co/datasets/algoplexity/qcea-adaptive-agent-benchmark):** The 2D "Dancing Landscape" corpus (Horizon 2).
+| Horizon | Focus | Key Result |
+| :--- | :--- | :--- |
+| **Foundation** | Ontology | Genetic Algorithms reveal algorithmic structure (Rule 131, Pair 35/115) invisible to econometrics |
+| **Horizon 0** | Sensation | Univariate predictive error detects coherence loss ($\Lambda > \eta_K$) better than VAR |
+| **Horizon 1** | Perception | AIT Physicist achieves **−29.95%** early-warning lead time; taxonomy of Cognitive Saturation / Overload |
+| **Horizon 2 (current)** | Agency | QCEA-AIXI agent with Entropic Valuation outperforms baselines by **+19.0%** |
+| **Horizon 3** | Society | Deep GNCA Titans model systemic coherence loss across UCL / ANU / Oxford INET |
 
 ---
 
