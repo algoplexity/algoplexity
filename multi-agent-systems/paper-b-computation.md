@@ -7,10 +7,12 @@
 This paper defines the constructive procedures required to compute the theoretical quantities introduced in Paper A. It provides bounded, executable approximations for description length, structural coordination, temporal dependence, and local causal contribution. The framework enforces a single description-length basis and introduces perturbation-driven causal calculus under strict computational constraints.
 
 Paper B is distinct from paper A and C as defined below 
+```
 CI-Minimal/
 ├── Paper_A_Theory.md
 ├── Paper_B_Computation.md
 └── Paper_C_Measurement_CIO.md
+```
 ---
 
 ## **1. Role of This Layer**
