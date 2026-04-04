@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algoplexity — Algorithmic Cognitive Science</title>
+  <meta name="description" content="Algoplexity is a long-term research initiative decoding the physics of intelligence in complex adaptive systems." />
+  <style>
+    /* ── Reset & base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #0d1117;
+      --surface:   #161b22;
+      --border:    #30363d;
+      --text:      #c9d1d9;
+      --muted:     #8b949e;
+      --accent:    #58a6ff;
+      --purple:    #bc8cff;
+      --green:     #3fb950;
+      --orange:    #f0883e;
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 0.88em;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+    }
+
+    /* ── Nav ───────────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,17,23,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: var(--muted); font-size: 0.92rem; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+      background: radial-gradient(ellipse at 50% 0%, #1a2a4a 0%, var(--bg) 65%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-label {
+      display: inline-block;
+      border: 1px solid var(--purple);
+      color: var(--purple);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+    .badges { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; }
+    .badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .badge.green  { border-color: var(--green);  color: var(--green); }
+    .badge.blue   { border-color: var(--accent); color: var(--accent); }
+    .badge.purple { border-color: var(--purple); color: var(--purple); }
+
+    /* ── Main layout ────────────────────────────────────────────── */
+    main { max-width: 960px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    section { margin-bottom: 4rem; }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    h3 { font-size: 1.1rem; color: var(--accent); margin: 1.5rem 0 0.5rem; }
+    p { color: var(--text); margin-bottom: 0.9rem; }
+
+    /* ── Theory cards ────────────────────────────────────────────── */
+    .theory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .theory-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.2s;
+    }
+    .theory-card:hover { border-color: var(--accent); }
+    .theory-card .tc-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 0.3rem;
+    }
+    .theory-card h4 { font-size: 0.97rem; color: #fff; margin-bottom: 0.3rem; }
+    .theory-card p  { font-size: 0.88rem; color: var(--muted); margin: 0; }
+
+    /* ── Roadmap table ───────────────────────────────────────────── */
+    .roadmap-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.65rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      letter-spacing: 0.06em;
+    }
+    td {
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #0f131a; }
+    td strong { color: #fff; }
+    .status-current {
+      display: inline-block;
+      background: rgba(63,185,80,0.15);
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-size: 0.72rem;
+      padding: 1px 7px;
+      border-radius: 10px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+
+    /* ── Findings ─────────────────────────────────────────────────── */
+    .finding {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .finding h4 { color: #fff; font-size: 1rem; margin-bottom: 0.4rem; }
+    .finding p  { font-size: 0.9rem; color: var(--muted); margin: 0 0 0.5rem; }
+    .finding .metric {
+      display: inline-block;
+      background: rgba(88,166,255,0.12);
+      border: 1px solid rgba(88,166,255,0.3);
+      color: var(--accent);
+      font-size: 0.82rem;
+      padding: 2px 10px;
+      border-radius: 10px;
+    }
+
+    /* ── Datasets ─────────────────────────────────────────────────── */
+    .dataset-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+    .dataset-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem;
+    }
+    .dataset-card h4 { color: var(--accent); margin-bottom: 0.5rem; font-size: 0.97rem; }
+    .dataset-card p  { font-size: 0.88rem; color: var(--muted); margin: 0 0 0.75rem; }
+    .dataset-card a  { font-size: 0.85rem; }
+
+    /* ── Repos ────────────────────────────────────────────────────── */
+    .repo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .repo-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      transition: border-color 0.2s;
+    }
+    .repo-card:hover { border-color: var(--accent); }
+    .repo-card .rc-horizon {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.2rem;
+    }
+    .repo-card h4 { color: var(--accent); font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .repo-card p  { font-size: 0.86rem; color: var(--muted); margin: 0; }
+
+    /* ── Citation ─────────────────────────────────────────────────── */
+    pre {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem;
+      overflow-x: auto;
+      font-size: 0.83rem;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    /* ── Footer ───────────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+
+    /* ── Responsive ────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero { padding: 3.5rem 1.25rem 3rem; }
+      main { padding: 2rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────────────────────── -->
+<nav>
+  <span class="nav-brand">⬡ Algoplexity</span>
+  <div class="nav-links">
+    <a href="#mission">Mission</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#findings">Findings</a>
+    <a href="#datasets">Datasets</a>
+    <a href="#repos">Repositories</a>
+    <a href="#citation">Citation</a>
+  </div>
+</nav>
+
+<!-- ── Hero ───────────────────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="hero-label">Research Initiative · 2023 – 2033</div>
+  <h1>The <span>Algoplexity</span> Research Program</h1>
+  <p>Decoding the physics of intelligence in complex adaptive systems through Algorithmic Cognitive Science.</p>
+  <div class="badges">
+    <span class="badge green">Status: Active</span>
+    <span class="badge blue">Field: Algorithmic Cognitive Science</span>
+    <span class="badge purple">Framework: UAI · QCEA · NL · AID</span>
+  </div>
+</header>
+
+<!-- ── Main ────────────────────────────────────────────────────────────── -->
+<main>
+
+  <!-- Mission -->
+  <section id="mission">
+    <h2>🌌 Mission</h2>
+    <p>
+      Algoplexity is a long-term research initiative dedicated to establishing a new field of study:
+      <strong>Algorithmic Cognitive Systems (ACS)</strong>. We posit that complex adaptive systems—whether
+      financial markets, biological swarms, or social institutions—are not merely stochastic processes.
+      They are <strong>Distributed Computational Entities</strong> possessing system-level cognition.
+    </p>
+    <p>
+      Our mission is to develop the <strong>Theory</strong>, <strong>Instrumentation</strong>, and
+      <strong>Agency</strong> required to understand and navigate the "Dancing Landscape" of these systems.
+    </p>
+
+    <h3>The Grand Synthesis — The Cybernetic Intelligence Protocol</h3>
+    <p>Our work unifies seven foundational theories into a coherent engineering framework (The "Tower" Hypothesis):</p>
+    <div class="theory-grid">
+      <div class="theory-card">
+        <div class="tc-label">AID</div>
+        <h4>Algorithmic Information Dynamics</h4>
+        <p>The physics of causal structure and complexity. <em>(Zenil et al.)</em></p>
+      </div>
+      <div class="theory-card">
+        <div class="tc-label">UAI</div>
+        <h4>Universal Artificial Intelligence</h4>
+        <p>The mathematics of optimal general intelligence. <em>(Hutter)</em></p>
+      </div>
+      <div class="theory-card">
+        <div class="tc-label">NL</div>
+        <h4>Nested Learning Theory</h4>
+        <p>Hierarchical optimization and continuum memory. <em>(Behrouz)</em></p>
+      </div>
+      <div class="theory-card">
+        <div class="tc-label">QCEA</div>
+        <h4>Quantum-Complex-Entropic-Adaptive</h4>
+        <p>The thermodynamics of strategic viability. <em>(Williams)</em></p>
+      </div>
+      <div class="theory-card">
+        <div class="tc-label">EV</div>
+        <h4>Entropic Valuation</h4>
+        <p>Value reconstruction based on Epistemic Fragility <code>dH/dτ</code> rather than temporal decay.</p>
+      </div>
+      <div class="theory-card">
+        <div class="tc-label">Λ/η<sub>K</sub></div>
+        <h4>Coherence Theory</h4>
+        <p>Rigorous condition for eco-evolutionary stability. Regime collapse as a deterministic threshold. <em>(Williams)</em></p>
+      </div>
+      <div class="theory-card">
+        <div class="tc-label">GNCA</div>
+        <h4>Graph Neural Cellular Automata</h4>
+        <p>The topology of distributed computation. <em>(Grattarola)</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap">
+    <h2>🗺️ 10-Year Roadmap (2023–2033)</h2>
+    <p>
+      We execute a <strong>"Reduction-Synthesis"</strong> cycle: zooming in from the macro-swarm to the
+      atomic unit of cognition (The Agent) to solve Perception, then zooming out to model the distributed
+      network (The Society).
+    </p>
+    <div class="roadmap-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Horizon</th>
+            <th>Focus</th>
+            <th>Cognitive Scale</th>
+            <th>The Scientific Goal</th>
+            <th>Artifact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Foundation</strong></td>
+            <td>Ontology</td>
+            <td>The Swarm</td>
+            <td>Existence Proof. Genetic Algorithms prove markets are algorithmic, not random.</td>
+            <td><a href="https://doi.org/10.13140/RG.2.2.22740.46722" target="_blank">Master's Thesis</a></td>
+          </tr>
+          <tr>
+            <td><strong>Horizon 0</strong></td>
+            <td>Sensation</td>
+            <td>The Nerve</td>
+            <td>The Somatic Marker. Detecting Coherence Loss (Λ &gt; η<sub>K</sub>) via predictive error spikes.</td>
+            <td><a href="https://github.com/algoplexity/Coherence-Meter" target="_blank">Coherence Meter</a></td>
+          </tr>
+          <tr>
+            <td><strong>Horizon 1</strong></td>
+            <td>Perception</td>
+            <td>The Neuron</td>
+            <td>The Cognitive EEG. Measuring Environmental Drift (Λ) by compressing the computational regime.</td>
+            <td><a href="https://github.com/algoplexity/computational-phase-transitions" target="_blank">Comp. Phase Transitions</a></td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Horizon 2</strong>
+              <span class="status-current">Current</span>
+            </td>
+            <td>Agency</td>
+            <td>The Agent</td>
+            <td>The Reflective Mind. Implementing the Coherence Veto (System 0) when Λ &gg; η<sub>K</sub>.</td>
+            <td><a href="https://github.com/algoplexity/qcea-aixi-agent" target="_blank">QCEA-AIXI Agent</a></td>
+          </tr>
+          <tr>
+            <td><strong>Horizon 3</strong></td>
+            <td>Society</td>
+            <td>The Hive Mind</td>
+            <td>Collective Intelligence. Modeling Systemic Coherence Loss caused by synchronized update rules.</td>
+            <td><a href="https://github.com/algoplexity/hive-mind-gnca" target="_blank">Hive Mind</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Findings -->
+  <section id="findings">
+    <h2>📚 Scientific Findings</h2>
+
+    <div class="finding">
+      <h4>Foundation — The Existence Proof (2023)</h4>
+      <p>Financial markets contain discoverable algorithmic structures (Rule 131, Pair 35/115) invisible to standard econometrics. Method: Genetic Algorithms + MILS Encoding.</p>
+      <a href="https://doi.org/10.13140/RG.2.2.22740.46722" target="_blank" class="metric">→ Master's Thesis</a>
+    </div>
+
+    <div class="finding">
+      <h4>Horizon 0 — The Somatic Marker (2025a)</h4>
+      <p><strong>"Less is More."</strong> High-resolution multivariate models (VAR) fail to detect breaks due to parameter explosion. A simple univariate proxy (Predictive Error) works better.</p>
+      <a href="https://ssrn.com/abstract=5914102" target="_blank" class="metric">→ SSRN Working Paper</a>
+    </div>
+
+    <div class="finding">
+      <h4>Horizon 1 — The Cognitive EEG (2025b)</h4>
+      <p>
+        Taxonomy of Cognitive Failure:
+        <strong>Cognitive Saturation</strong> (Rule 54 / Colliding Solitons) — the market "thinks itself into a corner";
+        <strong>Cognitive Overload</strong> (Rule 60 / Fractal Shattering) — the shock outruns the mixing time.
+      </p>
+      <span class="metric">−29.95% early-warning lead time on out-of-sample data</span>
+    </div>
+
+    <div class="finding">
+      <h4>Horizon 2 — The Reflective Physicist (Current)</h4>
+      <p>
+        <strong>Entropic Valuation &amp; Plasticity.</strong> An agent adjusting its "Wingspan" (Uncertainty)
+        based on the Physicist's diagnosis outperforms statistical baselines. Implements three nested systems:
+        System 0 (Coherence Veto), System 1 (Iron Dome), System 2 (The Physicist).
+      </p>
+      <span class="metric">+19.0% over statistical baselines</span>
+    </div>
+
+    <div class="finding">
+      <h4>Horizon 3 — The Graph-Theoretic Future</h4>
+      <p>
+        Hypothesis: Systemic Risk is a GNCA. A market crash is the propagation of a specific computational
+        state (Rule 54/Default) across the asset topology. Engineering Deep GNCA Titans — graph nodes that
+        are self-referential learners.
+      </p>
+      <a href="https://github.com/algoplexity/hive-mind-gnca" target="_blank" class="metric">→ Hive Mind Repository</a>
+    </div>
+  </section>
+
+  <!-- Datasets -->
+  <section id="datasets">
+    <h2>📊 Open Datasets</h2>
+    <p>All Horizons operate on immutable scientific benchmarks hosted on Hugging Face for unassailable reproducibility.</p>
+    <div class="dataset-cards">
+      <div class="dataset-card">
+        <h4>Structural Break Benchmark</h4>
+        <p>1D Time Series corpus used across Horizon 0 and Horizon 1 experiments.</p>
+        <a href="https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data" target="_blank">View on Hugging Face →</a>
+      </div>
+      <div class="dataset-card">
+        <h4>QCEA Adaptive Agent Benchmark</h4>
+        <p>2D "Dancing Landscape" corpus for Horizon 2 agent evaluation.</p>
+        <a href="https://huggingface.co/datasets/algoplexity/qcea-adaptive-agent-benchmark" target="_blank">View on Hugging Face →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repositories -->
+  <section id="repos">
+    <h2>🔧 Repositories</h2>
+    <div class="repo-grid">
+      <a class="repo-card" href="https://github.com/algoplexity/Coherence-Meter" target="_blank">
+        <div class="rc-horizon">Horizon 0</div>
+        <h4>Coherence Meter</h4>
+        <p>Detecting Coherence Loss (Λ &gt; η<sub>K</sub>) via predictive error spikes.</p>
+      </a>
+      <a class="repo-card" href="https://github.com/algoplexity/computational-phase-transitions" target="_blank">
+        <div class="rc-horizon">Horizon 1</div>
+        <h4>Computational Phase Transitions</h4>
+        <p>AID-based Cognitive EEG for financial market regime detection.</p>
+      </a>
+      <a class="repo-card" href="https://github.com/algoplexity/qcea-aixi-agent" target="_blank">
+        <div class="rc-horizon">Horizon 2 · Current</div>
+        <h4>QCEA-AIXI Agent</h4>
+        <p>Cybernetic loop with Entropic Valuation and zero-shot policy shifts.</p>
+      </a>
+      <a class="repo-card" href="https://github.com/algoplexity/hive-mind-gnca" target="_blank">
+        <div class="rc-horizon">Horizon 3</div>
+        <h4>Hive Mind (GNCA)</h4>
+        <p>Graph Neural Cellular Automata modeling collective intelligence collapse.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Citation -->
+  <section id="citation">
+    <h2>🔗 Citation</h2>
+    <p>If you use the Algoplexity framework or datasets in your research, please cite the meta-program:</p>
+    <pre>@misc{algoplexity_program,
+  author    = {Mak, Yeu Wen},
+  title     = {The Algoplexity Research Program: Foundations of
+               Algorithmic Cognitive Systems},
+  year      = {2025},
+  publisher = {GitHub},
+  journal   = {GitHub repository},
+  howpublished = {\url{https://github.com/algoplexity/algoplexity}}
+}</pre>
+  </section>
+
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────────────────── -->
+<footer>
+  <p>
+    © 2025 Algoplexity · Yeu Wen Mak ·
+    <a href="https://github.com/algoplexity" target="_blank">GitHub</a> ·
+    <a href="https://huggingface.co/algoplexity" target="_blank">Hugging Face</a>
+  </p>
+</footer>
+
+</body>
+</html>
