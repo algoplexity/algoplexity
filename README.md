@@ -6,6 +6,20 @@
 
 ---
 
+## 📂 Repository Structure
+
+```
+/
+├── theory/          # Canonical theoretical definitions (CI, E_O, E_dir, I(G,e), phase space, observer model, CIv1–CIv20)
+├── implementation/  # CIO hardware spec, validation protocol, measurement pipeline
+├── paper/           # Working paper sections (abstract → 05)
+├── grants/          # Grant pitches extracted from working documents
+├── program/         # Long-term roadmap, theoretical background, guiding thesis
+└── archive/         # Superseded versions (theory v1–v3, Titan specs, etc.)
+```
+
+---
+
 ## 🌌 The Mission: Algorithmic Cognitive Science (ACS)
 Algoplexity is a long-term research initiative dedicated to establishing a new field of study: **Algorithmic Cognitive Systems**.
 
@@ -25,15 +39,7 @@ Our work unifies seven foundational theories into a coherent engineering framewo
 
 ## 🗺️ The 10-Year Roadmap (2023–2033)
 
-We are executing a **"Reduction-Synthesis"** cycle: zooming in from the macro-swarm to the atomic unit of cognition (The Agent) to solve the problem of Perception, before zooming out to model the distributed network (The Society).
-
-| Horizon | Focus | Cognitive Scale | The Theoretical Shift (NL + Coherence) | The Scientific Goal | Artifact |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Foundation** | Ontology | **The Swarm** | *N/A* | *The Existence Proof.* Genetic Algorithms prove that market cross-sections are algorithmic, not random. | [**Master's Thesis**](https://doi.org/10.13140/RG.2.2.22740.46722) |
-| **Horizon 0** | Sensation | **The Nerve** | **The Pain Signal** | *The Somatic Marker.* Detecting the **Coherence Loss** ($\Lambda > \eta_K$) via predictive error spikes. | [**The Coherence Meter**](https://github.com/algoplexity/Coherence-Meter) |
-| **Horizon 1** | Perception | **The Neuron** | **Slow Context Flow** | *The Cognitive EEG.* Measuring the **Environmental Drift ($\Lambda$)** by compressing the computational regime. | [**Comp. Phase Transitions**](https://github.com/algoplexity/computational-phase-transitions) |
-| **Horizon 2** | Agency | **The Agent** | **Continuum Memory** | *The Reflective Mind.* Implementing the **Coherence Veto**: Engaging System 0 (Survival) when $\Lambda > \eta_K$. | [**The QCEA-AIXI Agent**](https://github.com/algoplexity/qcea-aixi-agent) |
-| **Horizon 3** | Society | **The Hive Mind** | **Self-Modifying Titans** | *The Collective Intelligence.* Modeling **Systemic Coherence Loss** ($\Lambda_{Hive} > \eta_{Hive}$) caused by synchronized update rules. | [**The Hive Mind**](https://github.com/algoplexity/hive-mind-gnca) |
+See **[`program/research-roadmap.md`](program/research-roadmap.md)** for the full Horizon 0–3 plan, per-horizon findings, and shared data artifacts.
 
 ---
 
