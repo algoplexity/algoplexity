@@ -182,3 +182,74 @@ E_O^{total} = E_O + \alpha \cdot D(M(t))
 ---
 
 This completes the mapping of the minimal unified theory to a fully operational CIO CPS framework.
+
+---
+```
+Collective-Intelligence-Observatory/
+│
+├── 00_ARCHITECTURE/
+│   ├── system_diagram.png
+│   ├── data_flow.md
+│   └── interface_contract.md
+│
+├── 01_TINKERCAD/
+│   ├── circuits/
+│   │   ├── node_IMU/
+│   │   └── hub_mock/
+│   ├── 3D_designs/
+│   │   ├── node_enclosure/
+│   │   └── hub_enclosure/
+│   └── exports/
+│       ├── wiring_diagrams/
+│       ├── STL_files/
+│       └── screenshots/
+│
+├── 02_WOKWI/
+│   ├── node_sim/
+│   ├── hub_sim/
+│   └── multi_node_system/
+│
+├── 03_FIRMWARE/
+│   ├── node/
+│   ├── hub/
+│   └── shared/
+│
+├── 04_REALTIME_ENGINE/
+│   ├── graph_builder/
+│   ├── metric_engine/
+│   └── tests/
+│
+├── 05_ACTUATION/
+│   ├── LED_mapping/
+│   └── animations/
+│
+├── 06_EXPERIMENT/
+│   ├── protocol/
+│   ├── scripts/
+│   └── results/
+│
+├── 07_DEMO/
+│   ├── demo_script.md
+│   └── fallback_modes.md
+│
+├── 08_THEORY/
+│   ├── Paper_A_Theory.md
+│   ├── Paper_B_Computation.md
+│   └── Paper_C_Measurement_CIO.md
+│
+├── 09_DATA/
+│   ├── raw/
+│   ├── processed/
+│   └── metadata/
+│
+├── 10_VALIDATION/
+│   ├── unit_tests/
+│   ├── system_tests/
+│   └── benchmarks/
+│
+└── 11_LOGS/
+    ├── runtime/
+    └── experiment_runs/
+```
+
+---
