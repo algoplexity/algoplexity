@@ -13,6 +13,8 @@
 **Purpose:**  
 This protocol defines how MACYB operates as a **repeatable, iterative, LLM-assisted knowledge system** spanning theory, implementation, publication, and archival recordkeeping.
 
+MACYB/CIO is a three-repo, living knowledge system with a stable folder grammar and explicit provenance rules.
+
 ---
 
 # 0. Core principle
@@ -31,6 +33,20 @@ The system improves through repeated cycles of:
 - linting and repairing,
 - publishing safe subsets,
 - and preserving provenance.
+
+---
+
+# 0.1 CIO three-repo architecture
+
+The CIO programme operates as a coordinated three-repository system:
+
+- `algoplexity/algoplexity` — theory source and canonical conceptual frame
+- `algoplexity/ANU-MACYB-private` — private working knowledge engine and implementation layer
+- `algoplexity/ANU-MACYB-public` — curated public mirror and communication layer
+
+These repositories should be treated as structurally aligned layers of one research programme. They are not independent projects.
+
+The objective is to keep their organizational grammar broadly consistent so that theory, private working notes, and public-safe outputs can be maintained with low cognitive overhead over long time horizons.
 
 ---
 
@@ -215,6 +231,23 @@ The LLM should periodically check for:
 
 ---
 
+## 5.7 CIO living knowledge base
+
+The CIO programme is maintained as a living, versioned knowledge base.
+
+LLMs may be used to:
+- ingest sources
+- compile structured markdown pages
+- maintain indices and backlinks
+- generate reusable summaries
+- file outputs back into the repository system
+- surface contradictions and stale content
+- support iterative refinement over time
+
+This is not an uncontrolled wiki. All compiled knowledge must preserve provenance, traceability, and reviewability.
+
+---
+
 # 6. Change propagation rules
 
 ## 6.1 Theory → Private
@@ -292,6 +325,19 @@ Every major artefact should record:
 - Notes: ...
 ```
 
+## 8.1 Cross-repo alignment
+
+CIO content is expected to remain broadly aligned across:
+- theory source
+- private working repository
+- public mirror
+
+Exact wording may differ by layer, but the underlying concepts, folder grammar, and source lineage should remain traceable.
+
+If a concept changes in the theory layer, downstream layers should be reviewed.
+If private material changes, public-safe derivatives should be reviewed.
+If public wording changes, it must not introduce new meaning beyond the upstream sources.
+
 ---
 
 # 9. Terminology governance
@@ -365,6 +411,21 @@ If divergence exists:
 - notes
 - source links
 - PDFs / attachments
+
+## 11.5 CIO repository grammar
+
+Where possible, the CIO repositories should use a shared conceptual folder grammar so that users can navigate the system consistently across theory, private, and public layers.
+
+Recommended shared roles:
+- `00_MANIFESTS/` — indexes, sync state, artefact registry
+- `01_THEORY/` — canonical theory and formal definitions
+- `02_KNOWLEDGE/` — compiled wiki-style knowledge pages
+- `03_WHITEPAPERS/` — longform explanatory documents
+- `04_PROJECTS/` — project-specific material
+- `05_OUTPUTS/` — generated deliverables and exports
+- `06_ARCHIVE/` — historical or superseded material
+
+Individual repositories may omit layers they do not need, but the naming logic should remain stable where possible.
 
 ---
 
