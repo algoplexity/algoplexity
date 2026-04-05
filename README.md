@@ -1,0 +1,1 @@
+This repository is the theory source for the CIO programme. It contains canonical concepts, formal theory, and high-level research framing. Downstream private and public repositories should remain aligned with its terminology and conceptual structure.
