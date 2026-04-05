@@ -34,8 +34,6 @@ The system improves through repeated cycles of:
 - publishing safe subsets,
 - and preserving provenance.
 
----
-
 # 0.1 CIO three-repo architecture
 
 The CIO programme operates as a coordinated three-repository system:
@@ -47,6 +45,74 @@ The CIO programme operates as a coordinated three-repository system:
 These repositories should be treated as structurally aligned layers of one research programme. They are not independent projects.
 
 The objective is to keep their organizational grammar broadly consistent so that theory, private working notes, and public-safe outputs can be maintained with low cognitive overhead over long time horizons.
+
+# 0.2 CIO cross-repo folder standard
+
+To reduce cognitive load and support long-term maintenance, the CIO programme should use a shared folder grammar across the three repositories wherever practical.
+
+## Shared folder roles
+
+- `00_MANIFESTS/` — registry, sync status, indexes, artifact inventory
+- `01_THEORY/` — canonical theory statements, formal definitions, theory notes
+- `02_KNOWLEDGE/` — living wiki-style compiled knowledge pages, concept pages, backlinks, summaries
+- `03_WHITEPAPERS/` — longform explanatory documents, technical notes, public/private-facing whitepapers
+- `04_PROJECTS/` — project-specific material for CIO subprojects
+- `05_OUTPUTS/` — generated deliverables, exports, charts, tables, reusable summaries
+- `06_ARCHIVE/` — historical, superseded, or preserved artefacts
+
+## Repository intent
+
+### `algoplexity/algoplexity`
+Theory source and canonical conceptual frame.
+- prioritize `01_THEORY/`
+- preserve stable terminology
+- archive prior theory versions in `06_ARCHIVE/`
+
+### `ANU-MACYB-private`
+Working knowledge engine and implementation layer.
+- use the full folder grammar where useful
+- keep internal notes, decision logs, and richer derivations
+- maintain provenance and sync metadata
+
+### `ANU-MACYB-public`
+Curated public mirror and communication layer.
+- mirror only safe and stable concepts
+- keep naming aligned with the private repo where possible
+- omit private or unstable derivations
+
+## Alignment rule
+
+The three repositories should be structurally aligned, but not content-identical.
+
+This means:
+- same conceptual map
+- same folder grammar where practical
+- different depth and safety by layer
+
+## Knowledge lifecycle
+
+Major artefacts should follow the lifecycle:
+
+1. ingest
+2. compile
+3. derive
+4. validate
+5. publish
+6. archive
+
+## Divergence rule
+
+Divergence is allowed only when intentional, such as:
+- private-only reasoning
+- public-safe omission
+- staging lag
+- experimental notes
+
+Whenever divergence occurs, record:
+- what diverged
+- why
+- whether temporary or permanent
+- which repository is canonical for that slice
 
 ---
 
