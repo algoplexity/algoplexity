@@ -2,90 +2,90 @@
 
 ## **Project Title:**
 
-**Cybernetic Intelligence Observatory (CIO): A Mesoscopic Instrument for Measuring Collective Intelligence**
+**Cybernetic Intelligence Observatory (CIO): A Bounded Observer for Measuring Collective Intelligence**
 
 ---
 
 ## 1. Project Overview
 
-The **Cybernetic Intelligence Observatory (CIO)** is a cyber-physical system designed to **measure, manipulate, and study collective intelligence** in a distributed multi-agent system.
+The **Cybernetic Intelligence Observatory (CIO)** is a cyber-physical system (CPS) that measures and regulates collective behaviour using **minimum description length (MDL)** under a **bounded observer**.
 
-Unlike conventional swarm systems that rely on predefined rules or optimisation objectives, the CIO treats collective behaviour as an **information-theoretic phenomenon**. The system measures how compressible the system’s behaviour is under a bounded observer, and uses this as the **sole state variable**.
-
-The core state of the system is defined as:
+Unlike conventional multi-agent systems that optimise predefined rewards, the CIO defines the system state **exclusively** as:
 
 [
 L^* = \min(L_{sym}, L_{lat})
 ]
 
-where:
+Where:
 
-* (L_{sym}) is a symbolic (compression-based) description
-* (L_{lat}) is a latent (model-based) description
+* (L_{sym}): symbolic description length (compression-based)
+* (L_{lat}): latent description length (predictive model-based)
 
-From this, the system derives:
-
-* **Observer-relative entropy:**
-  [
-  E_O = 1 - \text{normalize}(L^*)
-  ]
-
-* **Representation disagreement:**
-  [
-  \Delta L = |L_{sym} - L_{lat}|
-  ]
-
-* **Structural change rate:**
-  [
-  r_{eff} = EMA(\Delta L)
-  ]
-
-The CIO therefore functions as a **cybernetic instrument** that observes and regulates collective behaviour using **minimum description length (MDL)** rather than predefined goals.
-
----
-
-## 2. Project Motivation and Research Basis
-
-This project is grounded in three prior research components:
-
-### Paper A — Theory
-
-Defines collective intelligence as **observer-relative compressibility**, where structure corresponds to reduced description length.
-
-### Paper B — Computation
-
-Formalises the system using a bounded observer:
+All measurements are performed under an explicitly defined observer:
 
 [
 O = (\phi, M, B)
 ]
 
-* ( \phi ): deterministic encoding
-* ( M ): model class (compression / prediction)
-* ( B ): computational budget
+* ( \phi ): deterministic encoding of system state
+* ( M ): bounded model class (dual description)
+* ( B ): strict computational budget
 
-All descriptions must operate under the **same observer constraints**, ensuring scientific validity.
+Derived observables:
 
-### Paper C — Measurement
+* **Observer-relative entropy**
+  [
+  E_O = 1 - \frac{L^*}{L_{max}}
+  ]
 
-Defines observable quantities:
+* **Representation disagreement (mesoscopic signal)**
+  [
+  \Delta L = |L_{sym} - L_{lat}|
+  ]
 
-* (L^*) (system state)
-* (E_O) (entropy / coordination)
-* (\Delta L) (representation disagreement)
-* (r_{eff}) (phase transition signal)
+* **Structural change rate**
+  [
+  r_{eff} = EMA(\Delta L)
+  ]
 
-These enable empirical validation of **phase transitions in collective systems**.
+This system treats **collective intelligence as compressibility**, not performance.
 
 ---
 
-## 3. System Architecture (Cyber-Physical System)
+## 2. Research Foundation (Traceability to Prior Work)
 
-The CIO is implemented as a fully integrated CPS consisting of:
+The CIO directly instantiates three prior research stages:
 
-### 3.1 Physical Layer (Sensing)
+### Theory (Paper A)
 
-Each agent (ESP32-based node) captures **local motion data** via inertial sensors (IMU):
+* Collective intelligence = **observer-relative compressibility**
+* System state defined only by (L^*)
+
+### Computation (Paper B)
+
+* Formal observer:
+  [
+  O = (\phi, M, B)
+  ]
+* Dual-description requirement:
+
+  * symbolic and latent models share encoding and budget
+
+### Measurement (Paper C)
+
+Defines measurable quantities:
+
+* (L^*), (E_O), (\Delta L), (r_{eff})
+
+---
+
+## 3. System Architecture (CPS Implementation)
+
+The CIO integrates **sensing, computation, and actuation** through a strict data pipeline:
+
+### 3.1 Physical Sensing Layer
+
+Each agent (ESP32 node) emits:
 
 ```json
 S_t = {
@@ -93,115 +93,185 @@ S_t = {
 }
 ```
 
-This represents the agent’s **local physical state**.
+This represents **raw physical movement**.
 
 ---
 
-### 3.2 Structural Mapping (Geometry → Graph)
+### 3.2 Geometry → Structure Mapping
 
-The system transforms physical motion into a **binary interaction graph**:
+Physical motion is transformed into a **binary interaction graph**:
 
 [
-S_t \rightarrow A_t
+S_t \rightarrow A_t \in {0,1}^{N \times N}
 ]
 
-Where:
+Implementation details:
 
-* (A_t) is a symmetric adjacency matrix
-* edges are formed based on spatial proximity
+* fixed dimension (N = 5)
+* symmetric adjacency matrix
+* edges defined by spatial proximity threshold
 
-This step converts **continuous physical geometry into discrete symbolic structure**, enabling algorithmic analysis.
+This step converts **continuous physics into discrete symbolic structure**, enabling MDL computation.
 
 ---
 
-### 3.3 Observer Layer (Computation)
+### 3.3 Encoding Function (φ)
 
-A bounded observer processes a sliding window of system states:
+The observer uses a deterministic encoding:
 
-[
-O_{hub} = (\phi, M_{zlib}, B_{tight})
-]
+```python
+encode_sequence(window):
+    return concatenate(A_t.flatten(order="C"))
+```
 
-#### Encoding (φ)
+Constraints:
 
-* deterministic
 * fixed ordering
-* adjacency-only (Phase 1–2)
-
-#### Dual Description:
-
-* **Symbolic:** compression via zlib
-* **Latent:** bounded predictive model (entropy / Markov approximation)
-
-#### Output:
-
-* (L^*), (\Delta L), (E_O), (r_{eff})
+* no stochastic preprocessing
+* identical across all observers
 
 ---
 
-### 3.4 Control Layer (Actuation)
+### 3.4 Formal Bounded Observer
 
-The system closes the cybernetic loop via:
+The system explicitly implements:
 
 [
-\text{if } L^* \uparrow \Rightarrow \text{increase coupling}
-]
-[
-\text{if } L^* \downarrow \Rightarrow \text{increase noise}
+O_{hub} = (\phi, M, B)
 ]
 
-Practically implemented as:
+#### Budget (B)
 
-* **alignment signals** (increase coordination)
-* **thermal noise injection** (increase exploration)
+```python
+OBSERVER_BUDGET = {
+    context_length_W = 50,
+    max_dim_N = 5,
+    L_MAX_bytes = 156.25,
+    markov_model_cost_bytes = 16.0
+}
+```
 
-This enables **self-regulation at the edge of chaos**.
+Constraints:
+
+* fixed temporal window
+* fixed spatial dimension
+* explicit model cost penalty
 
 ---
 
-### 3.5 Actuation (Physical Output)
+### 3.5 Dual Description Models (M)
 
-Agents respond by adjusting their motion:
+#### Model 1 — Symbolic (Compression)
 
-* LEDs indicate system state (coherent ↔ chaotic)
-* motion behaviour adapts in real time
-* swarm-level patterns emerge physically
+[
+L_{sym} = \text{zlib}(\phi(S_{t:t+W}))
+]
+
+* dictionary-based compression
+* bounded by (L_{max})
 
 ---
 
-## 4. The Mesoscope: Observer Hierarchy
-
-A key innovation of the CIO is its role as a **mesoscopic measurement instrument**.
-
-The system implements two observers:
-
-### Real-Time Observer (Hub)
+#### Model 2 — Latent (Predictive)
 
 [
-O_{hub} = (\phi, M_{simple}, B_{tight})
+L_{lat} = L(\text{data}|\text{Markov}) + L(\text{model})
 ]
 
-* fast
-* approximate
-* used for control
+Implementation:
 
-### Reference Observer (Offline)
+* first-order Markov transition model
+* Laplace smoothing for stability
+* explicit model cost (16 bytes)
+
+This ensures:
+
+* structured representation
+* bounded model complexity
+* fair comparison with (L_{sym})
+
+---
+
+### 3.6 State and Observables
+
+[
+L^* = \min(L_{sym}, L_{lat})
+]
+
+[
+E_O = 1 - \frac{L^*}{L_{max}}
+]
+
+[
+\Delta L = |L_{sym} - L_{lat}|
+]
+
+[
+r_{eff} = EMA(\Delta L)
+]
+
+**Critical Constraint:**
+(L^*) is the **only system state variable**
+
+---
+
+### 3.7 Control Layer (Cybernetic Feedback)
+
+Control law:
+
+```
+if L* increases → increase coupling
+if L* decreases → increase noise
+```
+
+Implementation:
+
+* agents receive:
+
+  * alignment signal (mean direction)
+  * chaos signal = (1 - E_O)
+
+This enables:
+
+* self-organisation
+* adaptive behaviour
+* operation near phase boundary
+
+---
+
+### 3.8 Actuation Layer
+
+Agents respond via:
+
+* motion adjustments
+* visual indicators (LEDs)
+* dynamic coupling behaviour
+
+---
+
+## 4. The Mesoscope (Observer Hierarchy)
+
+The CIO functions as a **mesoscopic measurement instrument** by comparing observers:
+
+### Real-Time Observer
+
+[
+O_{hub} = (\phi, M_{bounded}, B_{tight})
+]
+
+### Offline Reference Observer
 
 [
 O_{ref} = (\phi, M_{advanced}, B_{relaxed})
 ]
 
-* high fidelity
-* offline analysis
-* used for validation
-
-### Observer Divergence (Mesoscopic Signal)
+### Observer Divergence
 
 [
 D(X) = K_{O_{hub}}(X) - K_{O_{ref}}(X)
 ]
 
-This measures:
+This reveals:
 
 * observer bias
 * hidden structure
@@ -211,138 +281,142 @@ This measures:
 
 ## 5. Experimental Plan
 
-The system will be evaluated through controlled experiments:
-
 ### Phase 1 — Validation
 
-* synthetic graphs (aligned / random / clustered)
-* verify expected MDL behaviour
+* synthetic adjacency patterns
+* verify:
+
+  * aligned → low (L^*)
+  * random → high (L^*)
+  * clustered → intermediate
+
+---
 
 ### Phase 2 — Simulation
 
 * multi-agent dynamics
-* phase transition observation
-
-### Phase 3 — Hardware Deployment
-
-* ESP32 nodes with IMU
-* real-time data pipeline
-
-### Phase 4 — Closed-Loop Control
-
-* apply feedback using (L^*)
-* demonstrate self-organisation
-
-### Phase 5 — Perturbation Experiments
-
-* inject noise or faults
-* measure recovery via (r_{eff})
+* observe phase transition using (r_{eff})
 
 ---
 
-## 6. Offline Causal Analysis (Post-Demo Research)
+### Phase 3 — Hardware Deployment
 
-The CIO will generate structured datasets enabling:
+* ESP32 + IMU nodes
+* real-time data streaming
 
-### 6.1 Causal Contribution Analysis
+---
+
+### Phase 4 — Closed-Loop Control
+
+* apply feedback via (E_O)
+* demonstrate emergent coordination
+
+---
+
+### Phase 5 — Perturbation Testing
+
+* inject noise / faults
+* measure recovery dynamics
+
+---
+
+## 6. Offline Causal Analysis (Post-Demo)
+
+The system produces structured datasets enabling:
+
+### Causal Contribution
 
 [
 I(G, e) = L^*(G \setminus e) - L^*(G)
 ]
 
-Used to identify:
+Identifies:
 
-* critical agents
+* critical nodes
 * structural dependencies
 
 ---
 
-### 6.2 Observer Comparison
+### Observer Comparison
 
-* compare (O_{hub}) vs (O_{ref})
+* evaluate (O_{hub}) vs (O_{ref})
 * quantify epistemic limits
 
 ---
 
-### 6.3 Phase Transition Analysis
+### Phase Transition Detection
 
-* detect critical points using (r_{eff})
-* map “edge of chaos”
-
----
-
-The system therefore transitions from a prototype into a **research-grade measurement instrument**.
+* use (r_{eff}) to locate critical points
 
 ---
 
 ## 7. Materials and Budget
 
-| Component            | Purpose                     | Cost (AUD) |
-| -------------------- | --------------------------- | ---------- |
-| ESP32 (×5)           | computation + communication | ~$75       |
-| IMU sensors          | motion sensing              | ~$50       |
-| LEDs + resistors     | actuation / feedback        | ~$20       |
-| Breadboards + wiring | prototyping                 | ~$30       |
-| Power (USB/battery)  | operation                   | ~$25       |
+| Component           | Cost (AUD) |
+| ------------------- | ---------- |
+| ESP32 (×5)          | ~$75       |
+| IMU sensors         | ~$50       |
+| LEDs + resistors    | ~$20       |
+| Breadboard + wiring | ~$30       |
+| Power supply        | ~$25       |
 
-**Total:** ~$200 (within $250 constraint)
+**Total:** ~$200 (within $250 limit)
 
 ---
 
 ## 8. Risks and Mitigation
 
-| Risk             | Mitigation                           |
-| ---------------- | ------------------------------------ |
-| Sensor noise     | handled by observer (MDL robustness) |
-| Network latency  | Zero-Order Hold buffering            |
-| Hardware failure | modular node design                  |
-| Time constraints | phased MVP approach                  |
+| Risk             | Mitigation                 |
+| ---------------- | -------------------------- |
+| Sensor noise     | handled via MDL robustness |
+| Network latency  | ZOH buffering              |
+| Model bias       | dual-description + ΔL      |
+| Hardware failure | modular nodes              |
 
 ---
 
 ## 9. Cybernetic Principles
 
-The system explicitly implements:
+The CIO explicitly implements:
 
-* **Feedback loops** (observer → agents)
-* **Self-regulation** (entropy minimisation)
-* **Observer-dependence** (bounded inference)
-* **Emergence** (collective intelligence from local rules)
+* feedback control
+* observer-relative measurement
+* self-organisation
+* emergence
 
-It operationalises the **cybernetic wheel**:
+Cycle:
 
-**Sensing → Computation → Actuation → Environment → Sensing**
-
----
-
-## 10. Responsible and Sustainable Design
-
-* Low-power microcontrollers (ESP32)
-* reusable components
-* modular design for future research use
-* clear **sunset plan**: system can be disassembled and reused in future CPS experiments
+**Sensing → Encoding → Observation → Control → Actuation → Environment**
 
 ---
 
-## 11. Expected Outcome
+## 10. Responsible Design
 
-The CIO will demonstrate:
+* low-power components
+* reusable hardware
+* modular architecture
+* defined disassembly plan
 
-1. A working **cyber-physical system**
-2. Real-time measurement of **collective intelligence**
-3. Emergence of **self-organised coordination**
-4. A novel **mesoscopic measurement paradigm**
+---
+
+## 11. Expected Outcomes
+
+The system will demonstrate:
+
+1. A working CPS integrating sensing, computation, and actuation
+2. Real-time measurement of collective intelligence via MDL
+3. Emergent coordination without central control logic
+4. A mesoscopic instrument for scientific analysis
 
 ---
 
 ## 12. Conclusion
 
-The Cybernetic Intelligence Observatory is not simply a swarm system or simulation.
+The Cybernetic Intelligence Observatory is:
 
-It is:
+> A **bounded observer embedded in a cyber-physical system**, measuring and regulating collective behaviour through minimum description length.
 
-> A **bounded observer embedded in a physical system**, measuring and regulating collective behaviour through **minimum description length**.
+By enforcing strict observer constraints and dual-description modelling, the CIO transforms collective intelligence into a **measurable, controllable, and experimentally testable phenomenon**.
 
-By unifying theory, computation, and physical measurement, the CIO establishes a new experimental framework for studying **collective intelligence as an information-theoretic phenomenon**.
-
+---
 
