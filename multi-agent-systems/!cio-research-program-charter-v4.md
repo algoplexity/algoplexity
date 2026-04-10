@@ -53,6 +53,104 @@ with constraint:
 
 ---
 
+## A3.5 — CI EQUIVALENCE CLASS AXIOM (MISSING FOUNDATION)
+
+### Core Addition (SECOND-ORDER CYBERNETICS LOCK)
+
+> CI is not a point estimate. CI is an equivalence class over observer-relative compressions of system trajectories.
+
+Formally:
+
+[
+[X_t]_{CI} = { X'_t ;|; \hat{K}*O(X_t) \sim \hat{K}*{O'}(X'_t), ; \Delta_S < \epsilon, ; \mathcal{P}(X_t) \equiv \mathcal{P}(X'_t) }
+]
+
+Where:
+
+* ( \hat{K}_O ) = observer-dependent complexity estimator
+* ( \Delta_S ) = structural perturbation distance
+* ( \mathcal{P} ) = perturbation response signature
+
+---
+
+### C1. Interpretation Principle (CRITICAL)
+
+Two systems are **not different CI states** if:
+
+* they differ only by encoding
+* they differ only by estimator choice
+* they differ only by observer resolution
+
+They are the **same CI equivalence class**
+
+---
+
+### C2. Three Fundamental CI Equivalence Types
+
+#### (1) Representation Equivalence
+
+Same generative structure under different encodings:
+
+* adjacency matrix ↔ trajectory graph ↔ CA lattice
+* raw sensor stream ↔ interaction DAG
+
+---
+
+#### (2) Observer Equivalence (SECOND-ORDER CYBERNETICS CORE)
+
+Different observers O, O′:
+
+* different scale
+* different window W
+* different granularity
+
+are equivalent if:
+
+[
+E_O(X_t) \approx E_{O'}(X_t)
+]
+
+→ THIS IS THE CYBERNETIC CLOSURE CONDITION
+
+---
+
+#### (3) Estimator Equivalence (NEURAL BDM / MILS / BDM)
+
+[
+\hat{K}_1(X) \sim \hat{K}_2(X)
+]
+
+if:
+
+* same phase transitions are preserved
+* same structural breakpoints exist
+* same ΔL spikes occur
+
+---
+
+### C3. CI INVARIANCE PRINCIPLE (UPGRADED)
+
+> A CI measurement is valid only if it is invariant under at least one non-trivial equivalence class transformation.
+
+Meaning:
+
+* if CI changes under estimator swap → invalid inference
+* if CI changes under observer rescaling → not real structure
+* if CI changes under representation → not intrinsic
+
+---
+
+### C4. CRITICAL ROLE IN CIO
+
+This axiom is what enables:
+
+✔ structural break detection to be meaningful
+✔ Neural BDM vs BDM comparison to be valid
+✔ MILS causal deconvolution consistency
+✔ cross-domain CI transfer (swarm → market → LLMs)
+
+---
+
 ## A4. Fundamental Invariants (ONLY THREE ALLOWED)
 
 CIO is closed under exactly three observables:
