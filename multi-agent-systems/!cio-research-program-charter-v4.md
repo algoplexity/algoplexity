@@ -16,6 +16,60 @@ No conceptual expansion is allowed except through Section C rules.
 
 # 🧭 SECTION A — IMMUTABLE THEORY LAYER (NON-NEGOTIABLE)
 
+## A0 — CIO Semantic Binding Rule (PUBLIC LABEL STABILITY CONSTRAINT)
+
+> The term “Collective Intelligence Observatory (CIO)” is the **fixed public and institutional identifier** of the system.
+>
+> Internally, CIO refers to a **two-layer coupled system**:
+
+### (1) Cybernetic Layer (O)
+
+The bounded observer system responsible for:
+
+* encoding (X_t)
+* estimating (\hat{K})
+* computing invariants (E_O, E_{dir}, I)
+* enforcing measurement consistency
+
+### (2) Collective Layer (X_t)
+
+The multi-agent system consisting of:
+
+* physical agents
+* simulated agents
+* hybrid agentic systems (LLMs, robots, humans)
+
+---
+
+### A0.1 Coupling Principle
+
+> CIO is defined only on the interaction between these two layers.
+
+Formally:
+
+[
+CIO := f(O, X_t)
+]
+
+Where:
+
+* removing (O) → no measurement exists
+* removing (X_t) → no observable structure exists
+
+---
+
+### A0.2 Naming Constraint (IMPORTANT)
+
+> All public references to CIO MUST remain unchanged.
+
+However:
+
+* internal papers MAY use “Cybernetic layer” and “Collective layer”
+* experimental design MUST disambiguate layers
+* metrics MUST explicitly reference which layer they belong to
+
+---
+
 ## A1. Core Ontology
 
 The Cybernetic Intelligence Observatory (CIO) defines:
