@@ -1,3 +1,17 @@
+
+cio-core/
+├── META/                ← governance ONLY (not part of stack)
+├── 0-ontology/
+├── 1-theory/
+├── 2-computation/
+├── 3-measurement/
+├── 4-invariants/
+├── 5-observer/
+├── 6-constraints/
+├── 7-experiments/      ← OUTSIDE core validity chain (important)
+├── 8-instantiations/   ← implementation + Python notebooks
+---
+
 If you’re aligned with this, we move to:
 
 ```text
