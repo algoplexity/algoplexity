@@ -1,4 +1,6 @@
 ---
+
+```plaintext
 cio-core/
     2-measurement/
         otce.md
@@ -15,6 +17,8 @@ cio-experiments/
         mils/
     validation/
         phase-tests/
+
+```
 ---
 define the experiment interface contract (what every notebook/simulation must expose to be “CIO-compliant”)
 ---
