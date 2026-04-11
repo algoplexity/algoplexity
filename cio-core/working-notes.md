@@ -1,3 +1,11 @@
+---
+
+| Layer                    | Status                              |
+| ------------------------ | ----------------------------------- |
+| Ontology                 | minimal, stable                     |
+| Theory                   | observer-relative structure only    |
+| Measurement (OTCE)       | field over representations          |
+| Computation (this paper) | bounded approximation of that field |
 
 ---
 
