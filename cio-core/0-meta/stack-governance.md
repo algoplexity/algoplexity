@@ -246,6 +246,13 @@ Only the following are valid:
 
 ---
 
+# 🔒 RULE 16 — PROJECTION CONSTRAINT
+
+* experiments/ and implementations/ are downstream consumers only
+* They may not modify or redefine anything in cio-core/
+
+---
+
 # 🧭 FINAL META-AXIOM
 
 A CIO system is valid if and only if:
