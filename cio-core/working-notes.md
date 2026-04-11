@@ -1,4 +1,21 @@
 ---
+cio-core/
+    2-measurement/
+        otce.md
+        perturbation-theory.md
+        complexity-functional.md
+
+cio-experiments/
+    estimators/
+        bdm/
+        neural-bdm/
+        aid/
+    perturbation/
+        capa/
+        mils/
+    validation/
+        phase-tests/
+---
 define the experiment interface contract (what every notebook/simulation must expose to be “CIO-compliant”)
 ---
 
