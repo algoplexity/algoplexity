@@ -246,7 +246,7 @@ Only the following are valid:
 
 ---
 
-# 🔒 RULE 16 — PROJECTION CONSTRAINT
+# 🔒 RULE 16 — Downstream Non-Generativity Principle
 
 * experiments/ and implementations/ are downstream consumers only
 * They may not modify or redefine anything in cio-core/
