@@ -1,4 +1,22 @@
 
+
+# 🚀 Next move (highly recommended)
+
+We should now define:
+
+### `experiments/phase-1/phase1-spec.md`
+
+A **clean projection document** that:
+
+* maps Phase I → `cio-core`
+* explicitly declares observer O₀
+* removes all ambiguity from your notebooks
+
+That will finally stabilise everything downstream.
+
+
+---
+
 MQTT dashboard + HTML fits
 belongs in implementations/mqtt-dashboard/
 
