@@ -1,4 +1,4 @@
-# 📜 **Paper A — Minimal Unified Theory of Observer-Grounded Collective Intelligence (v2.1)**
+# 📜 **Paper A — Minimal Unified Theory of Observer-Grounded Collective Intelligence (v2.2 — LOCKED)**
 
 ---
 
@@ -12,7 +12,7 @@ The framework is grounded in:
 2. **Existence of a description-length relation (abstract, not instantiated)**
 3. **Invariance under admissible transformations**
 
-Collective intelligence is defined as a property of structured representations that exhibit **non-trivial organization admitting shorter description relative to their components**, without assuming any specific measurement, estimator, or computational mechanism.
+Collective intelligence is defined as a property of structured representations that exhibit **non-trivial organization admitting shorter description relative to structurally admissible sub-representations**, without assuming any specific measurement, estimator, or computational mechanism.
 
 This theory introduces no algorithms, metrics, or implementation details. It defines only the **necessary structural conditions** that any valid measurement of collective intelligence must satisfy.
 
@@ -70,91 +70,65 @@ No specific structure (graph, sequence, lattice, etc.) is assumed at this level.
 
 ---
 
-# **4. Decomposition Structure**
+# **4. Structural Organization (Locked Form)**
 
-There exists an observer-dependent decomposition operator:
+A representation ( x_t ) may exhibit internal organization.
 
-[
-\mathcal{D}_O : x_t \rightarrow { x_t^{(i)} }
-]
+We define:
 
-such that:
+> **Structurally admissible sub-representations** as representations derived from ( x_t ) that remain valid under the same observer ( O ).
 
-* each ( x_t^{(i)} ) is a sub-representation of ( x_t )
-* the decomposition is defined entirely within representation space
-* no specific construction method is assumed
+No mechanism for their derivation is assumed at this layer.
 
 ---
 
-## **4.1 Constraints**
+## 🔒 Constraint
 
-The decomposition operator must satisfy:
+This theory does NOT assume:
 
-* **Representation Preservation**: each ( x_t^{(i)} ) is a valid representation
-* **No External Information**: decomposition does not introduce new information
-* **Non-Uniqueness**: multiple valid decompositions may exist
+* how sub-representations are constructed
+* how they are extracted
+* how structure is measured
 
----
+It only asserts:
 
-## **4.2 Interpretation**
-
-Components are not ontological objects.
-
-They are:
-
-> **observer-relative decompositions of representations**
+> such sub-representations exist as a structural possibility under ( O )
 
 ---
 
-# **5. Structural Organization**
+# **5. Collective Intelligence (Final Definition)**
 
-A representation ( x_t ) may exhibit internal organization relative to a decomposition:
+A system exhibits collective intelligence relative to observer ( O ) if:
 
-[
-\mathcal{D}_O(x_t) = { x_t^{(i)} }
-]
-
-This organization reflects structure induced by interactions within the system.
+> the representation ( x_t ) exhibits non-trivial organization that admits a shorter description relative to a set of structurally admissible sub-representations.
 
 ---
 
-# **6. Collective Intelligence (Existence Condition)**
+## **5.1 Non-Triviality**
 
-A system exhibits **collective intelligence relative to observer ( O )** if:
-
-> the joint representation ( x_t ) exhibits **non-trivial organization that admits a shorter description relative to its components** ( { x_t^{(i)} } ) under at least one admissible decomposition ( \mathcal{D}_O )
+The representation contains structure beyond degenerate or uniform configurations.
 
 ---
 
-## **6.1 Non-Triviality**
+## **5.2 Relative Description Property**
 
-The representation must contain structure beyond trivial or degenerate forms.
+There exists a set of structurally admissible sub-representations such that:
 
----
-
-## **6.2 Relative Description Property**
-
-The joint representation admits a shorter description than the collection of its components.
+> the joint representation is not equivalent in descriptive structure to the collection of its sub-representations under observer-relative equivalence.
 
 ---
 
 ## 🔒 Clarification
 
-The notion of “shorter description” is not defined at this layer.
+* No computation of description length is defined here
+* No estimator is assumed
+* No metric is introduced
 
-It is formalized in the measurement layer.
-
----
-
-## **Interpretation**
-
-* structure arises from interaction
-* coordination reduces descriptive redundancy
-* independence removes shared structure
+This is a **purely structural constraint**
 
 ---
 
-# **7. Equivalence Class Axiom**
+# **6. Equivalence Class Axiom**
 
 Collective intelligence is not a scalar property.
 
@@ -163,7 +137,7 @@ It is defined over an **equivalence class of observer-relative representations**
 Two representations are equivalent if they preserve:
 
 * structural organization
-* decomposition behavior under ( \mathcal{D}_O )
+* relations between representations and their admissible sub-representations
 * behavior under admissible transformations
 
 Differences due to:
@@ -176,7 +150,7 @@ do not constitute different collective intelligence states.
 
 ---
 
-# **8. Invariance Requirement**
+# **7. Invariance Requirement**
 
 A valid characterization of collective intelligence must be invariant under admissible transformations, including:
 
@@ -186,7 +160,7 @@ A valid characterization of collective intelligence must be invariant under admi
 
 ---
 
-## **8.1 Admissible Transformations**
+## **7.1 Admissible Transformations**
 
 Admissible transformations are those that preserve representation validity under a fixed observer.
 
@@ -198,13 +172,9 @@ If a property changes under admissible transformations, it is not intrinsic to t
 
 ---
 
-# **9. Decomposability Principle**
+# **8. Decomposability Principle**
 
-Any valid description of collective structure must be consistent with at least one admissible decomposition:
-
-[
-\mathcal{D}_O(x_t)
-]
+Any valid description of collective structure must be consistent with at least one set of structurally admissible sub-representations.
 
 Such a description must:
 
@@ -214,7 +184,7 @@ Such a description must:
 
 ---
 
-# **10. Temporal Consistency**
+# **9. Temporal Consistency**
 
 For time-indexed systems:
 
@@ -228,7 +198,7 @@ Structural organization may evolve, but must remain definable under the same obs
 
 ---
 
-# **11. Observer Consistency Constraint**
+# **10. Observer Consistency Constraint**
 
 All theoretical statements are valid only under a **fixed observer ( O )**.
 
@@ -236,14 +206,14 @@ Changing the observer defines a different representation space and may change ob
 
 ---
 
-# **12. Closure**
+# **11. Closure**
 
 This theory introduces no numerical quantities.
 
 It defines only:
 
 * observer-grounded representation
-* decomposition structure
+* structurally admissible sub-representations
 * existence of structured organization
 * equivalence classes over representations
 * invariance requirements
@@ -252,13 +222,13 @@ All measurable quantities must be introduced in downstream layers.
 
 ---
 
-# **13. Scope**
+# **12. Scope**
 
 This theory:
 
 ✔ defines the existence conditions for collective intelligence
 ✔ establishes observer dependence
-✔ formalizes decomposition structure
+✔ enforces structural comparison without decomposition mechanisms
 ✔ enforces invariance and equivalence structure
 
 This theory does NOT:
@@ -270,13 +240,13 @@ This theory does NOT:
 
 ---
 
-# **14. Minimal Statement**
+# **13. Minimal Statement**
 
-> A multi-agent system is collectively intelligent, relative to an observer, if its induced representation exhibits non-trivial, invariant, and decomposable organization that admits a shorter description relative to its components.
+> A multi-agent system is collectively intelligent, relative to an observer, if its induced representation exhibits non-trivial, invariant, and structurally decomposable organization that admits a shorter description relative to its admissible sub-representations.
 
 ---
 
-# 🔒 Status
+# 🔒 **Status**
 
 This document defines the **theoretical layer of CIO**.
 
@@ -284,9 +254,9 @@ It is:
 
 ✔ consistent with ontology
 ✔ independent of measurement
+✔ independent of computation
 ✔ compatible with OTCE (Paper C)
 ✔ compliant with stack governance
 
 ---
-
 
