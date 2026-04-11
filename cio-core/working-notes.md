@@ -1,4 +1,6 @@
 ---
+define the experiment interface contract (what every notebook/simulation must expose to be “CIO-compliant”)
+---
 
 | Layer                    | Status                              |
 | ------------------------ | ----------------------------------- |
