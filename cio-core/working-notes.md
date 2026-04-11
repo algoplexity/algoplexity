@@ -18,7 +18,7 @@ Constraints:
     fixed W
 
 ---
-
+```plaintext
 repo-root/
 │
 ├── cio-core/                         ← 🔒 GOVERNED STACK (untouchable by experiments)
@@ -59,6 +59,7 @@ repo-root/
     ├── paper-b/
     ├── paper-c/
     └── unified/
+```
 ---
 
 It seems we a charter first such as a meta-document ...
