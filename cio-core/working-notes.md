@@ -1,4 +1,65 @@
 
+MQTT dashboard + HTML fits
+belongs in implementations/mqtt-dashboard/
+
+---
+# Phase 1 Projection Definition
+Observer O₀:
+    φ_O  = adjacency flattening (window W)
+    M    = zlib (LZ77)
+    B    = fixed buffer + compression limit
+
+Projection:
+    E_O(t) := scalar projection of E(O₀, t)
+
+Constraints:
+    adjacency-only
+    fixed N
+    fixed W
+
+---
+
+repo-root/
+│
+├── cio-core/                         ← 🔒 GOVERNED STACK (untouchable by experiments)
+│   ├── 0-meta/
+│   │   └── stack-governance.md       ← your document above
+│   │
+│   ├── 0-ontology/
+│   ├── 1-theory/
+│   ├── 2-computation/
+│   ├── 3-measurement/
+│   ├── 4-invariants/
+│   ├── 5-observer/
+│   ├── 6-constraints/
+│   └── ...
+│
+├── experiments/                      ← 🧪 ALL PHASE WORK LIVES HERE
+│   │
+│   ├── phase-1/
+│   │   ├── notebooks/
+│   │   │   └── canonical-phase1.ipynb
+│   │   ├── phase1-spec.md            ← projection definition
+│   │   └── results/
+│   │
+│   ├── phase-2/
+│   │   └── ...
+│   │
+│   └── shared/
+│       └── utilities/
+│
+├── implementations/                  ← 🛠 execution systems
+│   ├── python/
+│   ├── mqtt-dashboard/
+│   ├── firmware/
+│   └── hardware/
+│
+└── papers/
+    ├── paper-a/
+    ├── paper-b/
+    ├── paper-c/
+    └── unified/
+---
 
 It seems we a charter first such as a meta-document ...
 No concept may be operationally used in a layer before its defining dependencies are specified upstream.
