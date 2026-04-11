@@ -1,4 +1,14 @@
+If you’re aligned with this, we move to:
 
+```text
+1-theory/paper-a-ci-definition.md
+```
+
+Where we finally define:
+
+> what CI actually *is* under this ontology
+
+---
 
 # 🚀 Next move (highly recommended)
 
