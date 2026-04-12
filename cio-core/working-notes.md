@@ -1,5 +1,7 @@
 abc
 ---
+
+---
 4 Steps validation process 
 ---
 
@@ -2046,6 +2048,29 @@ This is **exactly aligned with your own framework**:
 
 
 ---
+```plaintext
+invariant-structure-core/
+    1-ontology/
+    2-theory/
+    3-measurement/
+    4-computation/
+    5-invariants/
+
+projections/
+    cio/
+    structural-break/
+
+validation/
+    experiments/
+
+systems/
+    cio-cps/
+
+inference/
+    causal-deconvolution.md
+    assembly-analysis.md
+```
+
 ```plaintext
 cio-core/
 │
