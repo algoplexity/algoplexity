@@ -1,6 +1,19 @@
 abc
 ---
+```plaintext
+projections/
+    cio/
+        1-ontology/
+        2-measurement/
+        3-computation/
+        4-system-model/
 
+    structural-break/
+        1-temporal-ontology/
+        2-measurement/
+        3-computation/
+        4-detection-model/
+```
 ---
 4 Steps validation process 
 ---
