@@ -1,13 +1,3 @@
-Here is the **clean, corrected, final v1.0** of your `repository-structure.md`, with all fixes applied:
-
-* constraints removed (properly delegated)
-* non-degeneracy removed (delegated)
-* mesoscopic section corrected (no ontology leakage)
-* meta location unified
-* scope tightened
-
----
-
 # 📜 Repository Structure Specification
 
 ## Invariant Structure Stack — Canonical Canvas (v1.0)
