@@ -60,6 +60,34 @@ Properties:
 
 ---
 
+## 1.4 Projection Operator
+
+Define the projection operator:
+
+$$
+\Pi^{CIO} : X_t \rightarrow \mathcal{X}_t
+$$
+
+such that:
+
+$$
+\Pi^{CIO}(X_t) = \{ \phi_{O_i}(X_t) \}_{i=1}^n
+$$
+
+where:
+- \(X_t\) is the system state (not directly accessible)
+- \(O_i\) are observers
+- \(\phi_{O_i}\) are observer encoding functions
+- \(\mathcal{X}_t\) is the bundle of observer-induced representations
+
+### Constraint
+
+The projection operator is not a computation, estimator, or measurement.
+
+It is the **ontological mapping that generates the representation space** on which all downstream layers operate.
+
+---
+
 # 🧭 2. Fundamental Relations
 
 ---
