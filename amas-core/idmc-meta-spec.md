@@ -1,20 +1,32 @@
-# AMAS Meta-Specification: Global Rule Admissibility Contract
+# AMAS Meta-Specification
+
+## Global Constraint Morphism Validity Contract
 
 ---
 
 ## 1. Purpose
 
-This document defines the **admissibility conditions for all governance rules** within AMAS.
+This document defines the **admissibility conditions for constraint representations within AMAS**.
 
-It does not define:
-- system structure  
-- system behavior  
-- domain content  
-- implementation  
+Constraint representations may appear as “rules”, “conditions”, or “governance statements”, but are not primitive objects.
+
+They are:
+
+> encoded projections of invariant-preserving constraints over admissible morphisms.
+
+This specification defines when such constraint representations are valid, composable, and non-degenerate.
+
+It does NOT define:
+
+* system structure
+* system behavior
+* ontology
+* computation semantics
+* dynamics laws
 
 It defines:
 
-> the necessary and sufficient conditions under which any rule is valid, enforceable, and composable within AMAS.
+> constraints on constraints, as morphism-level objects.
 
 ---
 
@@ -22,139 +34,380 @@ It defines:
 
 This specification applies to:
 
-- all rules  
-- all constraint sets  
-- all governance documents  
+* all governance rules
+* all constraint definitions
+* all meta-level specifications
+* all admissibility conditions expressed in symbolic or logical form
 
-No rule is exempt.
+No constraint representation is exempt.
 
----
+All are interpreted as:
 
-## 3. Rule Admissibility Constraints
-
-Every rule must satisfy all of the following:
-
-### 3.1 Falsifiability
-- A rule must be testable  
-- Violations must be observable  
-
-### 3.2 Local Checkability
-- A rule must be verifiable without requiring full system execution  
-
-### 3.3 Unambiguity
-- A rule must admit exactly one interpretation  
-
-### 3.4 Finite Evaluation
-- Rule validation must terminate in finite time  
+> candidate morphism constraints over AMAS domains.
 
 ---
 
-## 4. Rule Consistency Constraints
+## 3. Primitive Object Shift
 
-### 4.1 Non-Contradiction
-- No rule may contradict another rule  
+AMAS does not treat rules as primitives.
 
-### 4.2 Invariant Consistency
-- No rule may violate global invariants  
+The primitive object is:
 
-### 4.3 Acyclic Dependency
-- Rules must not form circular dependencies  
+[
+T : D_i \rightarrow D_j
+]
 
-### 4.4 Explicit Dependency
-- All rule dependencies must be explicitly declared  
+A “rule” is valid only if it can be interpreted as a constraint on:
 
----
+* admissible morphisms
+* admissible compositions of morphisms
+* invariant-preserving transformations
 
-## 5. Rule Scope Constraints
+Thus:
 
-### 5.1 Single-Domain Assignment
-- Each rule must belong to exactly one constraint domain  
-
-### 5.2 Non-Overlap
-- No rule may duplicate or partially replicate another rule  
-
-### 5.3 Boundary Integrity
-- Rules must not span multiple domains  
+> rules are second-order descriptions of morphism admissibility, not independent logical objects.
 
 ---
 
-## 6. Rule Composition Constraints
+## 4. Constraint Admissibility Conditions
 
-### 6.1 Conjunctive Composition
-- Rules combine via logical conjunction only  
-
-### 6.2 No Priority Semantics
-- No rule may override another  
-
-### 6.3 No Implicit Ordering
-- Rule evaluation order must not affect validity  
+A constraint representation is admissible only if it satisfies all conditions below.
 
 ---
 
-## 7. Rule Evolution Constraints
+### 4.1 Falsifiability (Morphism-Level)
 
-### 7.1 Explicit Modification
-- Rules may only be added, removed, or modified through explicit updates  
+A constraint is valid only if:
 
-### 7.2 Consistency Preservation
-- Any update must preserve:
-  - admissibility  
-  - consistency  
-  - non-contradiction  
+> violation corresponds to an observable failure of an admissible morphism condition.
 
-### 7.3 No Dynamic Rule Generation
-- Rules must not be generated at runtime  
+Falsification applies to:
 
-### 7.4 Version Traceability
-- All rule changes must be uniquely identifiable and traceable  
+* transformation validity
+* composition validity
+* invariant preservation failure
+
+Not to abstract logical consistency alone.
 
 ---
 
-## 8. Auditability Constraints
+### 4.2 Local Checkability
 
-### 8.1 Explicit Declaration
-- Every rule must be explicitly defined  
+A constraint must be verifiable using:
 
-### 8.2 Unique Identification
-- Every rule must have a unique identifier  
+* local domain information
+* adjacent morphism structure
+* bounded observer projection
 
-### 8.3 Independent Verifiability
-- Each rule must be verifiable in isolation  
+It must not require:
 
----
-
-## 9. Non-Interference Constraint
-
-### 9.1 Rule Isolation
-- No rule may modify or redefine the admissibility conditions of another rule  
-
-### 9.2 Constraint Integrity
-- Rules may constrain systems only, not other rules  
+* global system reconstruction
+* full trajectory simulation
+* omniscient evaluation of all states
 
 ---
 
-## 10. Closure Constraint
+### 4.3 Unambiguous Morphism Interpretation
 
-### 10.1 Completeness
-- The set of rules must define a closed constraint system  
+Each constraint must map to:
 
-### 10.2 No Implicit Rules
-- All admissibility conditions must be explicitly stated  
+> a single admissibility condition over a defined transformation class
 
-### 10.3 No External Dependencies
-- Rule validity must not depend on undefined external assumptions  
+No constraint may admit:
+
+* multiple incompatible morphism interpretations
+* context-dependent semantic switching
+* latent reinterpretation across domains
+
+---
+
+### 4.4 Finite Verification Closure
+
+Constraint evaluation must:
+
+* terminate in finite steps
+* depend on bounded representational operations
+* avoid recursive global dependency expansion
+
+Constraints that require infinite unfolding of system structure are invalid.
 
 ---
 
-## 11. Enforcement Requirement
-
-### 11.1 Detectability
-- Violations must be detectable  
-
-### 11.2 Non-Permissibility
-- Violating states or transformations are inadmissible  
-
-### 11.3 Decidability
-- Rule compliance must be decidable  
+## 5. Consistency Constraints
 
 ---
+
+### 5.1 Invariant Consistency
+
+All constraints must preserve:
+
+* equivalence classes defined in `amas-core/5-invariants/`
+
+No constraint may:
+
+* redefine invariants
+* collapse invariant partitions
+* introduce new equivalence structures implicitly
+
+---
+
+### 5.2 Morphism Consistency
+
+Constraints must remain consistent under:
+
+[
+T_2 \circ T_1
+]
+
+If individual constraints hold but composition violates admissibility, the constraint set is invalid.
+
+---
+
+### 5.3 Acyclic Constraint Dependency
+
+Constraint representations may not form cycles in dependency space.
+
+No constraint may:
+
+* depend on itself (directly or indirectly)
+* define admissibility circularly across domains
+
+---
+
+### 5.4 Explicit Dependency Requirement
+
+All referenced constraints must be:
+
+* explicitly declared
+* structurally located
+* non-implicit
+
+No hidden or emergent dependency chains are permitted.
+
+---
+
+## 6. Scope Constraints (Domain Binding)
+
+Each constraint representation must satisfy:
+
+---
+
+### 6.1 Single-Domain Binding
+
+A constraint belongs to exactly one AMAS domain:
+
+* amas-core
+* projections
+* inference
+* systems
+* validation
+
+---
+
+### 6.2 Non-Overlap Constraint
+
+Constraints must not:
+
+* duplicate functionality of other constraints
+* partially encode other domain constraints
+* act as cross-domain semantic carriers
+
+---
+
+### 6.3 Boundary Integrity
+
+Constraints must not span domains.
+
+Cross-domain effects must be expressed only through:
+
+> admissible morphism composition rules
+
+---
+
+## 7. Composition Constraints
+
+---
+
+### 7.1 Conjunctive Validity
+
+Constraint satisfaction is conjunctive:
+
+> all applicable constraints must hold simultaneously
+
+No disjunctive fallback is permitted.
+
+---
+
+### 7.2 No Priority Semantics
+
+Constraints do not override each other.
+
+There is:
+
+* no hierarchy of rules
+* no precedence ordering
+* no exception-based resolution
+
+All constraints are equal under admissibility evaluation.
+
+---
+
+### 7.3 Ordering Invariance
+
+Constraint evaluation must be invariant under ordering:
+
+> reordering constraint checks must not change admissibility outcome
+
+---
+
+## 8. Evolution Constraints
+
+---
+
+### 8.1 Explicit Modification Only
+
+Constraint representations may only change via:
+
+* explicit revision
+* versioned updates
+* traceable modification events
+
+---
+
+### 8.2 Admissibility Preservation Under Update
+
+Any modification must preserve:
+
+* invariant consistency
+* morphism validity conditions
+* non-degeneracy of constraint interpretation
+
+---
+
+### 8.3 No Runtime Constraint Generation
+
+Constraints cannot be:
+
+* dynamically generated during system execution
+* inferred from runtime behavior
+* evolved via system feedback loops
+
+---
+
+### 8.4 Traceability Requirement
+
+Every constraint must maintain:
+
+* unique identifier
+* version lineage
+* modification history
+
+---
+
+## 9. Auditability Constraints
+
+---
+
+### 9.1 Independent Verifiability
+
+Each constraint must be evaluable:
+
+> without requiring evaluation of the full AMAS system
+
+---
+
+### 9.2 Detectable Violation Condition
+
+A violation must correspond to:
+
+* a failed morphism admissibility test
+* or invariant inconsistency
+* or invalid composition
+
+---
+
+### 9.3 Structural Identifiability
+
+Each constraint must map to a distinct admissibility condition over:
+
+* a transformation class
+* or a composition class
+* or an invariant-preserving operation class
+
+---
+
+## 10. Non-Interference Constraint
+
+---
+
+### 10.1 Constraint Isolation
+
+Constraints may restrict transformations but may not:
+
+* modify other constraints
+* redefine admissibility logic of other constraints
+
+---
+
+### 10.2 No Cross-Constraint Mutation
+
+Constraints cannot act as meta-programs over other constraints.
+
+They operate only on:
+
+* morphisms
+* compositions
+* invariant relations
+
+---
+
+## 11. Closure Constraint
+
+---
+
+### 11.1 System Closure
+
+The constraint system is closed under:
+
+* admissible morphism composition
+* invariant-preserving transformation evaluation
+
+---
+
+### 11.2 No Implicit Constraint Space
+
+All constraints must be explicitly defined.
+
+No implicit rule emergence is permitted.
+
+---
+
+### 11.3 No External Semantic Dependence
+
+Constraint validity must not depend on:
+
+* external interpretation systems
+* human-inferred semantics
+* non-AMAS frameworks
+
+---
+
+## 12. Global Meta-Principle
+
+All constraints in AMAS are valid only if:
+
+> they define admissibility conditions over morphisms without introducing new semantic primitives beyond invariants, observer projections, and dynamics constraints.
+
+---
+
+## 13. Final Statement
+
+AMAS meta-specification defines:
+
+> the conditions under which constraint representations are admissible as second-order projections of invariant-preserving morphism structures.
+
+It does not define rules as primitives.
+
+It defines:
+
+> the admissibility space of constraint expressions over transformation systems.
