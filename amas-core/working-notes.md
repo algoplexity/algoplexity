@@ -1,4 +1,4 @@
-# Working Notes to migrate from static type system → bounded dynamical epistemic system.
+# Working Notes to establish amas-core
 
 ---
 
@@ -6,280 +6,286 @@ projection becomes constraint-preserving re-encoding between admissible represen
 
 ---
 
-# 0. Target object
+Good. Start from this README.
 
-New system name:
+Now treat AMAS-Core MD files as **nothing more than constraint modules over different object classes**.
 
-> **Algorithmic Mesoscope Admissibility System (AMAS)**
+Not architecture. Not layers. Not a pipeline.
 
-Core meaning:
+---
 
-* not a model
-* not a pipeline
-* not a type system
+# 1. What AMAS-Core actually is
+
+AMAS-Core is:
+
+> a set of *orthogonal constraint domains over different mathematical objects*
+
+Each `.md` file defines constraints over a different object type.
+
+That’s it.
+
+No hierarchy. No control flow. No “system design”.
+
+---
+
+# 2. The correct mental model
+
+Think of AMAS-Core as:
+
+```
+Objects:
+    S = States
+    T = Transitions
+    R = Rules
+    M = Morphisms (cross-domain maps)
+    O = Observers
+```
+
+Each `.md` file defines:
+
+> validity conditions over one object class or interaction class
+
+---
+
+# 3. What each AMAS-Core file actually is
+
+## 3.1 structure-constraints.md
+
+### Object class: STATES (S)
+
+Defines:
+
+> when a configuration is a valid state representation
+
+It answers:
+
+* what counts as a state
+* when two states are equivalent under invariants
+* when representation collapses structure
+
+It does NOT define:
+
+* transitions
+* rules
+* system behavior
+
+---
+
+## 3.2 dynamics-constraints.md (implied missing piece)
+
+### Object class: TRANSITIONS (T)
+
+Defines:
+
+> when state evolution is admissible
+
+It answers:
+
+* what transitions are allowed
+* what evolution preserves invariants
+* what temporal updates are valid
+
+It does NOT define:
+
+* state validity
+* rule validity
+* cross-domain mapping
+
+---
+
+## 3.3 meta-spec.md
+
+### Object class: RULES (R)
+
+Defines:
+
+> when a constraint statement is valid inside AMAS
+
+It answers:
+
+* what makes a rule well-formed
+* when rules are consistent
+* how rules can be composed
+* whether rules are decidable / checkable
+
+It does NOT define:
+
+* state validity
+* dynamics validity
+* system behavior
+
+---
+
+## 3.4 audit-spec.md
+
+### Object class: SYSTEM OF RULES (R → R)
+
+Defines:
+
+> how rules interact and whether the rule system is internally consistent
+
+It answers:
+
+* rule contradictions
+* rule redundancy
+* rule dependency cycles
+* global consistency of constraint system
+
+It does NOT define:
+
+* individual rule validity
+* state validity
+* dynamics validity
+
+---
+
+## 3.5 inter-domain-morphism-constraints.md (implicit but critical)
+
+### Object class: MORPHISMS (M)
+
+Defines:
+
+> how objects in different domains map into each other
+
+It answers:
+
+* how state maps to representation
+* how measurement projects structure
+* how systems embed AMAS
+* what mappings preserve invariants
+
+It is the **only cross-layer object**.
+
+---
+
+# 4. The key structural insight
+
+Each file constrains a different object:
+
+| File                  | Object             |
+| --------------------- | ------------------ |
+| structure-constraints | States (S)         |
+| dynamics-constraints  | Transitions (T)    |
+| meta-spec             | Rules (R)          |
+| audit-spec            | Rule systems (R→R) |
+| morphism-constraints  | Mappings (M)       |
+
+This is not a layered system.
 
 It is:
 
-> a bounded observer-dependent system of admissible structure + dynamics + measurement
+> a multi-sorted constraint algebra
 
 ---
 
-# 1. First principle change (critical)
+# 5. Why your previous confusion happened
 
-Old core assumption:
+Because earlier you assumed:
 
-* structure defines validity
+* structure = primary layer
+* dynamics = system behavior layer
+* meta = rule layer
 
-New core assumption:
+That is a **layered ontology model**.
 
-* **structure + dynamics define admissible trajectories of computation under bounded observation**
+AMAS is NOT that.
 
-This single shift forces the entire rewrite.
+AMAS is:
+
+> many independent constraint domains over different object classes
 
 ---
 
-# 2. New layer ontology (final architecture)
+# 6. How they actually relate
 
-Replace current mental model with:
+Not hierarchy.
 
-```text
-AMAS CORE
-├── 1 Ontology            (what exists)
-├── 2 Theory              (what is true)
-├── 3 Measurement         (what is observable/compressible)
-├── 4 Computation         (how representations transform)
-├── 5 Invariants          (what must never change)
-├── 6 Dynamics            (how admissible states evolve)
-├── META                  (how system is validated + governed)
+Instead:
+
+```
+          meta-spec
+              ↓
+        (validates rules)
+              ↓
+         audit-spec
+              ↓
+   (validates rule system consistency)
+              ↓
+structure ← dynamics
+    ↑          ↑
+    └── morphisms ──┘
 ```
 
-Everything else becomes **projection/execution layers**:
+But importantly:
 
-```text
-OUTSIDE CORE
-├── systems/              (instantiations like CIO CPS)
-├── inference/            (runtime reasoning engines)
-├── projections/          (theory → instantiation mappings)
-├── validation/           (empirical falsification layer)
-```
+* no single root
+* no global controller
+* no “top layer”
+
+Only **mutual constraint consistency**
 
 ---
 
-# 3. The real conceptual upgrade
+# 7. The real system invariant
 
-You are not upgrading structure.
+AMAS validity is:
 
-You are introducing:
+> fixed-point condition across all constraint domains
 
-## A bounded epistemic manifold
+Meaning:
 
-Formally:
+A system is valid only if:
 
-* states = admissible configurations
-* dynamics = admissible transitions
-* observers = bounded projections of state
-* measurement = compression relative to observer
+* states are valid under structure constraints
+* transitions are valid under dynamics constraints
+* rules are valid under meta constraints
+* rule system is consistent under audit constraints
+* mappings preserve invariants under morphism constraints
 
-So the system becomes:
-
-> a geometry of computable knowledge evolution
-
----
-
-# 4. Required global rewrite strategy
-
-This is not incremental. It is 4-phase migration.
+All simultaneously.
 
 ---
 
-## PHASE 1 — Canonical redefinition (META reset)
+# 8. Why this matters
 
-### Update:
+This removes the illusion that:
 
-* `meta/repository-structure.md`
-* `meta/stack-governance.md`
+> AMAS is a layered architecture
 
-### Replace:
+Instead:
 
-* “type system”
-* “static invariants”
-* “system architecture”
-
-### With:
-
-* “admissibility system over trajectories”
-
-Add rule:
-
-> Dynamics is a first-class constraint layer equal in authority to invariants.
+> AMAS is a coupled constraint field over multiple object classes
 
 ---
 
-## PHASE 2 — Core reorganization
+# 9. Final clarification (important)
 
-Add:
+So to answer your original confusion:
 
-```text
-6-dynamics/
-    admissible-trajectories.md
-    feedback-constraints.md
-    evolution-laws.md
-```
+### AMAS-Core MD files are:
 
-Move cybernetics here entirely.
+NOT:
 
----
+* modules in a pipeline
+* layers in a stack
+* components in a system
 
-## PHASE 3 — Remove control semantics from systems
+They are:
 
-In `systems/cio-cps/`:
-
-Replace all:
-
-* controller
-* policy
-* optimization
-* feedback loop (control meaning)
-
-With:
-
-* admissible transition selector
-* divergence-to-action mapping
-* state evolution interface
-
-Key constraint:
-
-> systems cannot define temporal laws
+> independent constraint theories over distinct mathematical object classes, coupled only through morphism consistency conditions
 
 ---
 
-## PHASE 4 — Introduce AMAS root contract
+If you internalize only one thing:
 
-Create:
-
-```text
-invariant-structure-core/README.md
-```
-
-Rename conceptually to:
-
-> AMAS System Contract
-
-It must define:
-
-* ontology
-* invariants
-* dynamics
-* measurement
-* computation
-* closure rule
+> AMAS is not structured vertically (layers)
+> AMAS is structured horizontally (object classes + constraint fields)
 
 ---
 
-# 5. Cybernetics repositioning (critical correction)
+Next step (when ready):
+You will stop “designing folders” and instead define:
 
-Old incorrect placement:
+> the constraint coupling equations between these object classes
 
-* inside systems as control logic
-
-New correct placement:
-
-```text
-core/6-dynamics/
-```
-
-Definition:
-
-> cybernetics = constraint on admissible state evolution, not optimization of state
-
-This is the single most important conceptual fix.
-
----
-
-# 6. Key invariant to enforce globally
-
-Add to `meta/structure-constraints.md`:
-
-> No component may define or modify a state transition rule outside `6-dynamics`.
-
-This prevents:
-
-* systems inventing control loops
-* inference engines altering system laws
-* pipelines embedding optimization
-
----
-
-# 7. AMAS formal interpretation
-
-The system is now:
-
-[
-\mathcal{S} = (\Omega, \mathcal{I}, \mathcal{M}, \mathcal{C}, \mathcal{D})
-]
-
-Where:
-
-* ( \Omega ): ontology
-* ( \mathcal{I} ): invariants
-* ( \mathcal{M} ): measurement (bounded observer projections)
-* ( \mathcal{C} ): computation rules
-* ( \mathcal{D} ): dynamics (admissible transitions)
-
----
-
-# 8. What AMAS is NOT
-
-Explicit exclusions:
-
-* not a learning system
-* not an optimization system
-* not a control system
-* not a neural architecture
-
-These may exist inside projections, but not in core semantics.
-
----
-
-# 9. Migration consequence for CIO CPS
-
-CIO CPS becomes:
-
-> a projection of AMAS dynamics into a physical sensing–actuation substrate
-
-Not:
-
-* a cyber-physical controller
-
-This resolves your earlier tension completely.
-
----
-
-# 10. Execution order for repo overhaul
-
-Strict order:
-
-1. meta layer rewrite (governance + stack)
-2. core structure add dynamics
-3. system layer refactor (remove control semantics)
-4. root contract creation
-5. reclassification of cybernetics into dynamics
-6. update CIO projection alignment
-
----
-
-# 11. Final state
-
-After overhaul:
-
-* core defines **admissible reality**
-* systems instantiate **valid configurations**
-* inference explores **within constraints**
-* dynamics governs **all evolution**
-* cybernetics becomes **law, not controller**
-
----
-
-This completes the transition:
-
-> from static type system → Algorithmic Mesoscope Admissibility System (AMAS)
+That is where AMAS becomes a real formal system instead of a structured specification.
