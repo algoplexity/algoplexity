@@ -2,6 +2,10 @@
 
 ---
 
+projection becomes constraint-preserving re-encoding between admissible representations
+
+---
+
 # 0. Target object
 
 New system name:
