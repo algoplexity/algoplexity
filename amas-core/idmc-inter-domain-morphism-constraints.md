@@ -1,50 +1,51 @@
-
 # AMAS / inter-domain-morphism-constraints.md
-## Algorithmic Mesoscope Admissibility System — Morphism Constraint Specification
+
+## Algorithmic Mesoscope Admissibility System — Structural Contract
 
 ---
 
 ## 1. Purpose
 
-This document defines the **admissible relations between AMAS constraint domains**.
+This document defines the **admissible morphism structure between AMAS domains**.
 
-It specifies when and how one constraint domain may reference, interpret, or transform representations associated with another domain.
+It specifies the constraints under which transformations between domains may exist.
 
 It does NOT define:
-- execution order  
-- system pipeline structure  
-- architecture hierarchy  
-- computational flow  
-- semantic authority ordering  
+
+- ontology
+- computation semantics
+- execution semantics
+- system hierarchy
+- control flow
+- inference logic
 
 It defines:
 
-> admissible constraint-preserving relations between independent constraint classes.
+> the admissibility conditions for cross-domain mappings under invariant, measurement, and dynamics constraints.
 
 ---
 
 ## 2. Structural Principle
 
-AMAS domains are **constraint classes**, not subsystems.
+AMAS is not a layered architecture.
+
+It is:
+
+> a constraint space over domains and admissible morphisms between them.
 
 Therefore:
 
-- domains do not execute
-- domains do not depend on upstream or downstream stages
-- domains do not form a pipeline
-- domains are not semantically ordered
-
-Instead:
-
-> domains exist in a shared constraint space where relationships are defined only through admissible morphisms.
+- domains are constraint regions, not subsystems
+- structure is induced by admissible transformations, not imposed hierarchy
+- no domain has semantic authority over another
 
 ---
 
 ## 3. Admissible Domain Set
 
-The only admissible constraint domains are:
+Only the following top-level domains exist:
 
-```text
+```
 amas-core/
 projections/
 inference/
@@ -53,151 +54,240 @@ validation/
 meta/
 ```
 
-Each domain is a **constraint class**, not an execution module.
+Each domain is a **constraint carrier**, not a functional component.
 
-No domain has ontological priority over another.
-
----
-
-## 4. Morphism Definition
-
-A morphism is a relation between two domains:
-
-$$
-T_{i,j}: D_i \leftrightarrow D_j
-$$
-
-such that:
-
-- it preserves applicable invariants  
-- it respects domain-specific admissibility constraints  
-- it does not introduce or require external semantics  
-- it does not collapse domains into one another  
-
-Morphisms are **constraint-preserving mappings**, not execution steps.
+No domain is privileged.
 
 ---
 
-## 5. Non-Pipeline Constraint
+## 4. Morphism Space Definition
 
-The following is strictly prohibited:
+Let:
 
-- interpreting domain relationships as a processing pipeline  
-- assigning global ordering to domains  
-- defining “upstream” or “downstream” semantics  
-- treating any domain as a prerequisite for another  
+- D_i, D_j ∈ AMAS domains
+- T: D_i → D_j be a candidate transformation
 
-Formally:
+Then T is not a function in a pipeline sense.
 
-> AMAS domains are not temporally, causally, or computationally ordered.
+It is a **constraint-respecting relation between representation spaces**.
 
-Any apparent ordering is a **projection artifact**, not a structural property.
+A morphism exists only if it satisfies all admissibility constraints simultaneously.
 
 ---
 
-## 6. Morphism Admissibility Constraint
+## 5. Admissibility Condition (Core Definition)
 
-A morphism $$T_{i,j}$$ is admissible only if:
+A morphism:
 
-### 6.1 Invariant preservation
-- it preserves invariants defined in `amas-core`
+```
 
-### 6.2 Structural consistency
-- it does not create structurally invalid representations in either domain
+T : D_i → D_j
 
-### 6.3 Representational compatibility
-- outputs remain valid under the target domain’s constraint rules
+```
 
-### 6.4 Non-redefinition constraint
-- it does not alter the definition of either domain
+is admissible iff:
+
+```
+
+C_inv(T) ∩ C_meas(T) ∩ C_dyn(T) ≠ ∅
+
+```
+
+where:
+
+- C_inv: invariant preservation constraints
+- C_meas: measurement / observer-bounded constraints
+- C_dyn: dynamical consistency constraints
+
+No single constraint is sufficient.
+
+Admissibility is **joint satisfaction across independent constraint systems**.
 
 ---
 
-## 7. Morphism Types
+## 6. Constraint Decomposition
 
-### 7.1 Identity morphism
-- within-domain equivalence transformations  
-- no structural change  
+### 6.1 Invariant Constraint
 
-### 7.2 Projection morphism
-- representation mapping across domains  
-- preserves invariants without introducing semantics  
+All morphisms MUST preserve equivalence classes defined in:
 
-### 7.3 Interpretation morphism
-- relates representational forms without asserting causal direction  
+```
 
-### 7.4 Validation morphism
-- checks admissibility consistency across domains without modifying them  
+amas-core/5-invariants/
+
+```
+
+Preservation is defined structurally as:
+
+- no collapse of equivalence classes
+- no splitting without admissible refinement rule
+- no creation of non-mappable states
+
+---
+
+### 6.2 Measurement Constraint
+
+All morphisms MUST respect observer-bounded structure defined in:
+
+```
+
+projections/3-measurement/
+
+```
+
+This includes:
+
+- representation boundedness
+- observer-relative encoding consistency
+- non-exceedance of representational resolution limits
+
+---
+
+### 6.3 Dynamical Constraint
+
+All morphisms MUST remain consistent with admissible evolution laws defined in:
+
+```
+
+amas-core/6-dynamics/
+
+```
+
+This includes:
+
+- transition consistency under allowed state evolution
+- no illegal trajectory induction
+- no dynamics-violating reconstruction of state transitions
+
+---
+
+## 7. Morphism Graph Constraint (NON-TOTALITY PRINCIPLE)
+
+There is no total ordering over domains.
+
+There is only an **admissible directed constraint graph**.
+
+Edges may exist only if admissibility holds.
+
+No global sequence exists.
+
+No canonical traversal exists.
+
+No pipeline interpretation is valid.
 
 ---
 
 ## 8. Forbidden Morphisms
 
-Invalid morphisms include:
+A morphism is invalid if it implies:
 
-- any mapping that introduces global hierarchy  
-- any mapping that enforces directional execution semantics  
-- any mapping that collapses domains into a single representation  
-- any mapping that redefines invariants or dynamics  
-- any mapping that treats one domain as controlling another  
+- semantic backflow
+- invariant violation
+- measurement overflow
+- dynamics inconsistency
 
----
+Explicitly forbidden interpretations include:
 
-## 9. Cross-Domain Compatibility Constraint
+- reverse-engineering upstream semantics from downstream domains
+- modifying invariant definitions via projection or inference outputs
+- redefining dynamics via validation or systems outputs
+- cyclic semantic re-encoding that bypasses constraint checks
 
-Two domains may interact only if:
-
-- their constraint sets are jointly satisfiable  
-- their invariants are non-contradictory under mapping  
-- their representations remain distinguishable after transformation  
-
-Compatibility does NOT imply ordering.
+Directionality is constraint-induced, not executional.
 
 ---
 
-## 10. Closure Constraint
+## 9. Non-Reinterpretation Constraint
 
-The system is valid only if:
+For any valid morphism T:
 
-- all defined morphisms preserve admissibility  
-- no emergent hierarchy is introduced  
-- no hidden execution pipeline arises from composition  
-- all domain interactions remain constraint-local  
+- D_j MAY NOT redefine semantics of D_i
+- downstream domains operate only on representations
+- upstream domains define constraint boundaries only
 
----
-
-## 11. Meta-Constraint Isolation
-
-This document does not define:
-
-- rules of validity (meta-spec responsibility)  
-- structural state constraints (structure-constraints responsibility)  
-- temporal evolution rules (dynamics-constraints responsibility)  
-- rule consistency checks (audit-spec responsibility)  
-
-It only defines:
-
-> admissible relationships between constraint domains.
+No domain has authority to retroactively alter another domain’s constraint system.
 
 ---
 
-## 12. System Interpretation Constraint
+## 10. Cross-Domain Constraint Coupling Rule
 
-Any interpretation of AMAS as:
+All morphisms MUST satisfy simultaneous coupling:
 
-- pipeline  
-- layered architecture  
-- execution graph  
-- control system  
+- invariant consistency
+- measurement consistency
+- dynamical consistency
 
-is invalid at the morphism level.
+No decoupled satisfaction is valid.
 
-Such interpretations are **external projections**, not structural properties of AMAS.
+Failure of any single constraint invalidates the morphism.
 
 ---
 
-## 13. Final Principle
+## 11. Domain Roles (Constraint Loci Interpretation)
+
+Each domain is interpreted as a constraint locus:
+
+- amas-core/
+  → defines invariant and dynamical constraint manifolds
+
+- projections/
+  → defines observer-relative representational constraints
+
+- inference/
+  → defines transformation constraints over representations
+
+- systems/
+  → defines executable realization constraints of admissible trajectories
+
+- validation/
+  → defines external falsification constraint checks over outputs
+
+- meta/
+  → defines higher-order constraint consistency rules across all domains
+
+These are not functional roles. They are constraint boundaries.
+
+---
+
+## 12. Closure Condition
+
+The inter-domain system is valid only if:
+
+- all morphisms satisfy joint admissibility constraints
+- no forbidden morphisms exist in the graph
+- no invariant leakage occurs across domains
+- no measurement or dynamics violation occurs
+- no implicit hierarchy is introduced via composition
+
+---
+
+## 13. Mesoscopic Interpretation Constraint
+
+Any emergent structure across domains:
+
+- is not ontological
+- is not a subsystem
+- is not a computation layer
+
+It is:
+
+> a derived property of constraint intersection over admissible morphism paths
+
+---
+
+## 14. Final Statement
 
 AMAS inter-domain structure is:
 
-> a non-hierarchical constraint compatibility space where domains relate only through admissible, invariant-preserving morphisms without execution semantics or ordering.
+> a constrained morphism system over independent domains governed by invariant, measurement, and dynamical admissibility conditions
+
+It is NOT:
+
+- a pipeline
+- an architecture
+- a layered system
+- a functional decomposition
+
+It is:
+
+> a constraint-defined morphism geometry over decomposed representational spaces
