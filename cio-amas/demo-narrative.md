@@ -253,6 +253,59 @@ Then:
 
 ---
 
+# X. 5 steps narrative
+
+## STEP 1 — Show Raw Reality
+
+No labels.
+
+Just:
+
+* graph
+* predicate vector
+* observer values
+
+Say:
+
+> “This is the same system.”
+
+---
+
+## STEP 2 — Ask Audience
+
+> “Is this coordinated?”
+
+They will disagree.
+
+---
+
+## STEP 3 — Reveal Observers
+
+Show:
+
+* LZ77
+* Markov
+
+They disagree.
+
+---
+
+## STEP 4 — Reveal ΔE
+
+Say:
+
+> “This is not noise. This is structural disagreement.”
+
+---
+
+## STEP 5 — Show Node Views
+
+Now the punchline:
+
+> “Each node lives in a different truth.”
+
+---
+
 # 🏁 **7. Final Statement (15 sec)**
 
 > “We didn’t build a better metric.”
