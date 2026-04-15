@@ -1,3 +1,144 @@
+# 🧠 1. Upgraded AMAS Predicate Basis (Orthogonal & Structural)
+
+We fix the exact failure you diagnosed:
+
+> ❌ current predicates detect activity
+> ✅ new predicates detect **structure class**
+
+Each predicate operates on a **disjoint projection slice** of ( X ).
+
+---
+
+## 🔹 Projection decomposition (MANDATORY)
+
+Split:
+
+[
+X = {A_{t-W}, \dots, A_t}
+]
+
+into:
+
+| Slice            | Description               |
+| ---------------- | ------------------------- |
+| (X^{(edge)})     | per-timestep edge density |
+| (X^{(temporal)}) | pairwise time transitions |
+| (X^{(lag)})      | lagged equality structure |
+| (X^{(motif)})    | local subgraph patterns   |
+| (X^{(perturb)})  | response to small noise   |
+
+Each predicate uses **only one slice**.
+
+---
+
+# ✅ Final Minimal Predicate Set (AMAS-clean)
+
+---
+
+## **C₁ — Edge Variability (edge slice only)**
+
+Detects trivial static systems.
+
+[
+C_1 = 1 \iff \text{Var}(d_t) > \epsilon_1
+]
+
+---
+
+## **C₂ — Transition Diversity (temporal slice)**
+
+Detects non-trivial evolution.
+
+[
+C_2 = 1 \iff |{A_t \to A_{t+1}}| > 1
+]
+
+---
+
+## **C₃ — Periodicity Detection (lag slice)**
+
+🔥 NEW — this is critical
+
+[
+C_3 = 1 \iff \exists \tau \in [2, \tau_{max}] : A_t = A_{t+\tau}
+]
+
+Detects clockwork / cycles.
+
+---
+
+## **C₄ — Aperiodicity (lag slice, disjoint operator)**
+
+[
+C_4 = 1 \iff \text{no dominant periodicity exists}
+]
+
+This separates:
+
+* crystal vs chaotic
+
+---
+
+## **C₅ — Motif Diversity (motif slice)**
+
+[
+C_5 = 1 \iff \text{multiple distinct local subgraphs exist}
+]
+
+---
+
+## **C₆ — Perturbation Sensitivity (perturb slice)**
+
+🔥 critical for phase transition
+
+[
+C_6 = 1 \iff X \neq X^{(\delta)} \text{ under small perturbation}
+]
+
+---
+
+# 🧩 Admissibility (unchanged form)
+
+[
+A({C_i}) = \bigwedge_i C_i
+]
+
+---
+
+# 🔥 What changed (this is key)
+
+You now explicitly detect:
+
+| Structure Type      | Detected by |
+| ------------------- | ----------- |
+| static              | C₁ fails    |
+| trivial oscillation | C₂ fails    |
+| periodic            | C₃          |
+| chaotic             | C₄          |
+| structured          | C₅          |
+| critical regime     | C₆          |
+
+---
+
+# 🔥 Final conceptual alignment
+
+Now your system becomes:
+
+### Layer 1 — AMAS
+
+* defines **what structures exist**
+
+### Layer 2 — CIO observers
+
+* define **how observers perceive those structures**
+
+---
+
+
+
+
+---
+---
 # ✅ Final Goal
 
 Construct a **minimal, non-degenerate, AMAS-admissible predicate basis**:
