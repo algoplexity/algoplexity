@@ -1,9 +1,3 @@
-Good — this is the point where the system stops being “a theory stack” and becomes a **closed measurement architecture**.
-
-We now formalize the missing boundary: **CIO–AMAS coupling as a typed observational interface**.
-
----
-
 # # AMAS / amas-core / cio-interface / cio-amas-boundary-contract.md
 
 ---
